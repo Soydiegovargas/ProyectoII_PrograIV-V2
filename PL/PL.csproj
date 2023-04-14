@@ -53,5 +53,13 @@
       <Name>DAL</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Estilos\CCSS.css" />
+    <Content Include="Estilos\Centros.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Master Page\" />
+    <Folder Include="Pantallas\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
