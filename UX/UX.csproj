@@ -84,7 +84,8 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Pantallas\" />
+    <Folder Include="Pantallas\Formularios\" />
+    <Folder Include="Pantallas\MasterPage\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
