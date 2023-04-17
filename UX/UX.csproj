@@ -69,13 +69,127 @@
   <ItemGroup>
     <Content Include="Estilos\CCSS.css" />
     <Content Include="Estilos\Centros.css" />
+    <Content Include="Estilos\Principal.css" />
+    <Content Include="Imagenes\blue_HD.jpg" />
+    <Content Include="Pantallas\Formularios\wfrm_Mant_Asegurados.aspx" />
+    <Content Include="Pantallas\Formularios\wfrm_Mant_CCSS.aspx" />
+    <Content Include="Pantallas\Formularios\wfrm_Mant_Centros.aspx" />
+    <Content Include="Pantallas\Formularios\wfrm_Mant_Contratas.aspx" />
+    <Content Include="Pantallas\Formularios\wfrm_Mant_Departamentos.aspx" />
+    <Content Include="Pantallas\Formularios\wfrm_Mant_Empleados.aspx" />
+    <Content Include="Pantallas\Formularios\wfrm_Mant_Especialidades.aspx" />
+    <Content Include="Pantallas\Formularios\wfrm_Mant_Farmacias.aspx" />
+    <Content Include="Pantallas\Formularios\wfrm_Mant_Incapacidades.aspx" />
+    <Content Include="Pantallas\Formularios\wfrm_Mant_Inventarios.aspx" />
+    <Content Include="Pantallas\Formularios\wfrm_Mant_Juntas.aspx" />
+    <Content Include="Pantallas\Formularios\wfrm_Mant_Pedidos.aspx" />
+    <Content Include="Pantallas\Formularios\wfrm_Menu.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Pantallas\Formularios\wfrm_Mant_Asegurados.aspx.cs">
+      <DependentUpon>wfrm_Mant_Asegurados.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pantallas\Formularios\wfrm_Mant_Asegurados.aspx.designer.cs">
+      <DependentUpon>wfrm_Mant_Asegurados.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas\Formularios\wfrm_Mant_CCSS.aspx.cs">
+      <DependentUpon>wfrm_Mant_CCSS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pantallas\Formularios\wfrm_Mant_CCSS.aspx.designer.cs">
+      <DependentUpon>wfrm_Mant_CCSS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas\Formularios\wfrm_Mant_Centros.aspx.cs">
+      <DependentUpon>wfrm_Mant_Centros.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pantallas\Formularios\wfrm_Mant_Centros.aspx.designer.cs">
+      <DependentUpon>wfrm_Mant_Centros.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas\Formularios\wfrm_Mant_Contratas.aspx.cs">
+      <DependentUpon>wfrm_Mant_Contratas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pantallas\Formularios\wfrm_Mant_Contratas.aspx.designer.cs">
+      <DependentUpon>wfrm_Mant_Contratas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas\Formularios\wfrm_Mant_Departamentos.aspx.cs">
+      <DependentUpon>wfrm_Mant_Departamentos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pantallas\Formularios\wfrm_Mant_Departamentos.aspx.designer.cs">
+      <DependentUpon>wfrm_Mant_Departamentos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas\Formularios\wfrm_Mant_Empleados.aspx.cs">
+      <DependentUpon>wfrm_Mant_Empleados.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pantallas\Formularios\wfrm_Mant_Empleados.aspx.designer.cs">
+      <DependentUpon>wfrm_Mant_Empleados.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas\Formularios\wfrm_Mant_Especialidades.aspx.cs">
+      <DependentUpon>wfrm_Mant_Especialidades.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pantallas\Formularios\wfrm_Mant_Especialidades.aspx.designer.cs">
+      <DependentUpon>wfrm_Mant_Especialidades.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas\Formularios\wfrm_Mant_Farmacias.aspx.cs">
+      <DependentUpon>wfrm_Mant_Farmacias.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pantallas\Formularios\wfrm_Mant_Farmacias.aspx.designer.cs">
+      <DependentUpon>wfrm_Mant_Farmacias.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas\Formularios\wfrm_Mant_Incapacidades.aspx.cs">
+      <DependentUpon>wfrm_Mant_Incapacidades.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pantallas\Formularios\wfrm_Mant_Incapacidades.aspx.designer.cs">
+      <DependentUpon>wfrm_Mant_Incapacidades.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas\Formularios\wfrm_Mant_Inventarios.aspx.cs">
+      <DependentUpon>wfrm_Mant_Inventarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pantallas\Formularios\wfrm_Mant_Inventarios.aspx.designer.cs">
+      <DependentUpon>wfrm_Mant_Inventarios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas\Formularios\wfrm_Mant_Juntas.aspx.cs">
+      <DependentUpon>wfrm_Mant_Juntas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pantallas\Formularios\wfrm_Mant_Juntas.aspx.designer.cs">
+      <DependentUpon>wfrm_Mant_Juntas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas\Formularios\wfrm_Mant_Pedidos.aspx.cs">
+      <DependentUpon>wfrm_Mant_Pedidos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pantallas\Formularios\wfrm_Mant_Pedidos.aspx.designer.cs">
+      <DependentUpon>wfrm_Mant_Pedidos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas\Formularios\wfrm_Menu.aspx.cs">
+      <DependentUpon>wfrm_Menu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pantallas\Formularios\wfrm_Menu.aspx.designer.cs">
+      <DependentUpon>wfrm_Menu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas\MasterPage\Principal.Master.cs">
+      <DependentUpon>Principal.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pantallas\MasterPage\Principal.Master.designer.cs">
+      <DependentUpon>Principal.Master</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <Content Include="Pantallas\MasterPage\Principal.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -83,10 +197,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Pantallas\Formularios\" />
-    <Folder Include="Pantallas\MasterPage\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
