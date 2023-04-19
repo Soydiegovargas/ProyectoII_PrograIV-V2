@@ -68,9 +68,19 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Estilos\CCSS.css" />
-    <Content Include="Estilos\Centros.css" />
+    <Content Include="Estilos\Mant_CCSS.css" />
     <Content Include="Estilos\Principal.css" />
     <Content Include="Imagenes\blue_HD.jpg" />
+    <Content Include="Imagenes\ccss.png" />
+    <Content Include="Imagenes\delete.png" />
+    <Content Include="Imagenes\edit.png" />
+    <Content Include="Imagenes\new.png" />
+    <Content Include="Imagenes\pipe.png" />
+    <Content Include="Imagenes\refresh.jpg" />
+    <Content Include="Imagenes\refresh.png" />
+    <Content Include="Imagenes\save.png" />
+    <Content Include="Imagenes\search.png" />
+    <Content Include="Javascript\js_Agregar_CCSS.js" />
     <Content Include="Pantallas\Formularios\wfrm_Mant_Asegurados.aspx" />
     <Content Include="Pantallas\Formularios\wfrm_Mant_CCSS.aspx" />
     <Content Include="Pantallas\Formularios\wfrm_Mant_Centros.aspx" />
@@ -186,6 +196,7 @@
       <DependentUpon>Principal.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PRUEBAS_DATAGRID.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -198,6 +209,16 @@
     </None>
   </ItemGroup>
   <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{a64660fa-e564-489f-b4a7-670a8871b103}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{48e82cf1-7cac-4e34-836e-fe0786fe2c32}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

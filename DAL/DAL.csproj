@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CATALOGOS\cls_Asegurados_DAL.cs" />
+    <Compile Include="CATALOGOS\CLS_BD_DAL_PRUEBA.cs" />
     <Compile Include="CATALOGOS\cls_CCSS_DAL.cs" />
     <Compile Include="CATALOGOS\cls_Centros_DAL.cs" />
     <Compile Include="CATALOGOS\cls_Contratas_DAL.cs" />

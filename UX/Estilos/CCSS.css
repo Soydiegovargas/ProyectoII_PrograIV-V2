@@ -1,15 +1,15 @@
-﻿body
-{
-    font-family:'Times New Roman', Times, serif;
-    color:black;
+﻿body {
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
 }
 h1 {
-    text-align:center;
-    font-size:3em;
+    text-align: center;
+    font-size: 3em;
 }
+
 h2 {
-text-align:center;
-font-size:2em;
+    text-align: center;
+    font-size: 2em;
 }
 
 
@@ -24,12 +24,13 @@ font-size:2em;
     width: 700px;
     height: 400px;
 }
+
+
 .btn_General {
     background-color: lightseagreen;
     border-radius: 10px;
     font-size: 20px;
     padding: 20px;
     margin-right: 10px;
-    margin-top:10px;
+    margin-top: 10px;
 }
-

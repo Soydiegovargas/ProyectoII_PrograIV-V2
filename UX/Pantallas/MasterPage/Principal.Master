@@ -8,13 +8,19 @@
 
     <link href="../../Estilos/Principal.css" rel="stylesheet" />
     <asp:ContentPlaceHolder ID="head" runat="server">
+    
+        
     </asp:ContentPlaceHolder>
 </head>  
+<asp:Image runat="server" ID="img_logo" ImageUrl="~/Imagenes/ccss.png" Width="172px"></asp:Image>
 <body>
     <form id="form1" runat="server">
         <div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+
+                
             </asp:ContentPlaceHolder>
+
         </div>
     </form>
 </body>
