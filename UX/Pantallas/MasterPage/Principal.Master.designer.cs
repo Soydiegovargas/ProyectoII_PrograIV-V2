@@ -24,6 +24,15 @@ namespace UX.Pantallas.MasterPage
         protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
 
         /// <summary>
+        /// img_logo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image img_logo;
+
+        /// <summary>
         /// form1 control.
         /// </summary>
         /// <remarks>

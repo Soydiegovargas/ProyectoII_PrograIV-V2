@@ -1,0 +1,163 @@
+﻿body {
+
+    font-size:30px;
+    color:darkslategrey;
+}
+/* Propiedades de Div TItulo Pricipal*/
+.div_Titulo {
+
+text-align:center;
+background-color:lightcyan;
+font-size:40px;
+
+margin-left:auto;
+margin-right:auto;
+
+}
+/* Propiedades de DIV donde se encuentre el Grid*/
+.div_Grid {
+    background-color: aliceblue;
+    font-family: 'Agency FB';
+    font-size: 16px;
+    display: inline-block;
+    text-align: center;
+}
+/* Propiedades de recuadro de busqueda*/
+.txt_Busqueda {
+    background-color: azure;
+    margin-right: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    margin-left: 1px;
+    border: 3px solid blue;
+    height: 20px;
+    width: 100px;
+    border-radius: 10px;
+}
+/* Propiedades de Boton Refrescar*/
+.btn_Refrescar {
+    background-color: #ccc;
+    background-image: url('../Imagenes/refresh.png');
+    background-position:center;
+    width: 60px;
+    height: 60px;
+    border:none;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+}
+.btn_Refrescar:hover {
+    
+    background-color:lightgreen;
+}
+/* Propiedades de Boton nuevo*/
+.btn_Nuevo {
+    background-color: #ccc;
+    background-image: url('../Imagenes/new.png');
+    background-position: center;
+    width: 60px;
+    height: 60px;
+    border: none;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    
+}
+ .btn_Nuevo:hover {
+        background-color: lightgreen;
+
+ }
+/* Propiedades de boton Modificar*/
+.btn_Modificar {
+    background-color: #ccc;
+    background-image: url('../Imagenes/edit.png');
+    background-position: center;
+    width: 60px;
+    height: 60px;
+    border: none;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+}
+.btn_Modificar:hover {
+    background-color: lightgreen;
+}
+/* Propiedades de Boton Filtrar*/
+.btn_Filtrar {
+    background-color: #ccc;
+    background-image: url('../Imagenes/search.png');
+    background-position: center;
+    width: 60px;
+    height: 60px;
+    border: none;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+}
+.btn_Filtrar:hover {
+    background-color: lightgreen;
+}
+/* Propiedades de boton eliminar*/
+.btn_Eliminar {
+    background-color: #ccc;
+    background-image: url('../Imagenes/delete.png');
+    background-position: center;
+    width: 60px;
+    height: 60px;
+    border: none;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+}
+.btn_Eliminar:hover {
+    background-color: lightgreen;
+}
+.img_Division {
+    margin-left: 10px;
+}
+.div_Botones {
+    width: fit-content;
+    display: inline;
+}
+/* Propiedades de Grid View*/
+.gv_Compania {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family:Verdana;
+}
+
+
+/*pruebas*/
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s ease;
+}
+
+    .modal:target {
+        visibility: visible;
+        opacity: 1;
+    }
+
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2em;
+    color: #fff;
+    cursor: pointer;
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+}
+
