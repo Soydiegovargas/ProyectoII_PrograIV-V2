@@ -13,7 +13,7 @@ namespace DAL.CATALOGOS
         private char _cAxn;
         private string _sEspecialidad, _sMsjError, _sTelefono, _sCodCentro;
         private int _iCodArea, _iTelef;
-        private DataTable _dtDatos;
+        private DataTable _dtDatos, _dtParametros;
         private string _sCodArea;
         #endregion
 
@@ -23,10 +23,12 @@ namespace DAL.CATALOGOS
         public string sMsjError { get => _sMsjError; set => _sMsjError = value; }
         public string sTelefono { get => _sTelefono; set => _sTelefono = value; }
         public int iCodArea { get => _iCodArea; set => _iCodArea = value; }
-        public DataTable dtDatos { get => _dtDatos; set => _dtDatos = value; }
         public string sCodCentro { get => _sCodCentro; set => _sCodCentro = value; }
         public string sCodArea { get => _sCodArea; set => _sCodArea = value; }
         public int iTelef { get => _iTelef; set => _iTelef = value; }
+        public DataTable dtDatos { get => _dtDatos; set => _dtDatos = value; }
+        public DataTable dtParametros { get => _dtParametros; set => _dtParametros = value; }
+
         #endregion
 
     }

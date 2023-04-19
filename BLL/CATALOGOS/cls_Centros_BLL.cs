@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BLL.WCF;
 using DAL.CATALOGOS;
+using System.Configuration;
 
 namespace BLL.CATALOGOS
 {
@@ -11,13 +13,9 @@ namespace BLL.CATALOGOS
     {
 
 
-        #region Globales
-        cls_BD_DAL Obj_BD_DAL = new cls_BD_DAL();
-        cls_BD_BLL Obj_BD_BLL = new cls_BD_BLL();
-        #endregion
-
         public void listar_filtrar_Centros(ref cls_Centros_DAL Obj_Centros_DAL)
         {
+
             cls_Centros_DAL Obj_Centros = new cls_Centros_DAL();
 
 
