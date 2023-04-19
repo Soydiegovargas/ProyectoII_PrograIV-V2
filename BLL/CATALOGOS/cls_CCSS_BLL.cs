@@ -3,127 +3,70 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BLL.WCF;
 using DAL.CATALOGOS;
+using System.Configuration;
 
 namespace BLL.CATALOGOS
 {
     public class cls_CCSS_BLL
     {
-        public void insertar_CCSS(ref cls_CCSS_DAL Obj_NuevoCCSS_DAL)
+        public void insertar_CCSS(ref cls_CCSS_DAL Obj_CCSS_DAL) // Listo
         {
-            cls_BD_DAL Obj_BD_DAL = new cls_BD_DAL();
-            cls_BD_BLL Obj_BD_BLL = new cls_BD_BLL();
+            WCF.BDClient Obj_WCF = new BDClient();
 
-            Obj_BD_DAL.sNomSp = ConfigurationManager.AppSettings["insertar_CCSS"].ToString();
+            Obj_CCSS_DAL.dtParametros = Obj_WCF.Get_DT_Param(Obj_CCSS_DAL.dtParametros);
 
-            Obj_BD_BLL.crearDTparametros(ref Obj_BD_DAL);
-            Obj_BD_DAL.obj_dtParametros.Rows.Add("@CED_JUR", "7", Obj_NuevoCCSS_DAL.sCed_Jur);
-            Obj_BD_DAL.obj_dtParametros.Rows.Add("@TELEFONO ", "1", Obj_NuevoCCSS_DAL.iTelefono);
-            Obj_BD_DAL.obj_dtParametros.Rows.Add("@PAGINA", "5", Obj_NuevoCCSS_DAL.sPagina);
-            Obj_BD_DAL.obj_dtParametros.Rows.Add("@DESCRIPCION", "5", Obj_NuevoCCSS_DAL.sDescripcion);
+            Obj_CCSS_DAL.dtParametros.Rows.Add("@CED_JUR", "7", Obj_CCSS_DAL.sCed_Jur);
+            Obj_CCSS_DAL.dtParametros.Rows.Add("@TELEFONO ", "1", Obj_CCSS_DAL.iTelefono);
+            Obj_CCSS_DAL.dtParametros.Rows.Add("@PAGINA", "5", Obj_CCSS_DAL.sPagina);
+            Obj_CCSS_DAL.dtParametros.Rows.Add("@DESCRIPCION", "5", Obj_CCSS_DAL.sDescripcion);
 
-
-            Obj_BD_BLL.ExecCommand(ref Obj_BD_DAL);
-            Obj_NuevoCCSS_DAL.sMsgError = Obj_BD_DAL.sMsjError;
+            Obj_CCSS_DAL.sMsjError = Obj_WCF.Ins_Upd_Delete(ConfigurationManager.AppSettings["insertar_CCSS"], "NORMAL", Obj_CCSS_DAL.dtParametros);
 
         }
-
-        public void modificar_CCSS(ref cls_CCSS_DAL Obj_CCSS_DAL)
+        public void modificar_CCSS(ref cls_CCSS_DAL Obj_CCSS_DAL) // Listo
         {
+            WCF.BDClient Obj_WCF = new BDClient();
 
-            cls_BD_DAL Obj_BD_DAL = new cls_BD_DAL();
-            cls_BD_BLL Obj_BD_BLL = new cls_BD_BLL();
+            Obj_CCSS_DAL.dtParametros = Obj_WCF.Get_DT_Param(Obj_CCSS_DAL.dtParametros);
 
-            Obj_BD_DAL.sNomSp = ConfigurationManager.AppSettings["modificar_CCSS"].ToString();
+            Obj_CCSS_DAL.dtParametros.Rows.Add("@CED_JUR", "7", Obj_CCSS_DAL.sCed_Jur);
+            Obj_CCSS_DAL.dtParametros.Rows.Add("@TELEFONO ", "1", Obj_CCSS_DAL.iTelefono);
+            Obj_CCSS_DAL.dtParametros.Rows.Add("@PAGINA", "5", Obj_CCSS_DAL.sPagina);
+            Obj_CCSS_DAL.dtParametros.Rows.Add("@DESCRIPCION", "5", Obj_CCSS_DAL.sDescripcion);
 
-            Obj_BD_BLL.crearDTparametros(ref Obj_BD_DAL);
-
-            Obj_BD_BLL.crearDTparametros(ref Obj_BD_DAL);
-            Obj_BD_DAL.obj_dtParametros.Rows.Add("@CED_JUR", "7", Obj_CCSS_DAL.sCed_Jur);
-            Obj_BD_DAL.obj_dtParametros.Rows.Add("@TELEFONO ", "1", Obj_CCSS_DAL.iTelefono);
-            Obj_BD_DAL.obj_dtParametros.Rows.Add("@PAGINA", "5", Obj_CCSS_DAL.sPagina);
-            Obj_BD_DAL.obj_dtParametros.Rows.Add("@DESCRIPCION", "5", Obj_CCSS_DAL.sDescripcion);
-
-            Obj_BD_BLL.ExecCommand(ref Obj_BD_DAL);
-            Obj_CCSS_DAL.sMsgError = Obj_BD_DAL.sMsjError;
+            Obj_CCSS_DAL.sMsjError = Obj_WCF.Ins_Upd_Delete(ConfigurationManager.AppSettings["modificar_CCSS"], "NORMAL", Obj_CCSS_DAL.dtParametros);
 
         }
-
-        public void eliminar_CCSS(ref cls_CCSS_DAL Obj_CCSS_DAL)
+        public void eliminar_CCSS(ref cls_CCSS_DAL Obj_CCSS_DAL) // Listo
         {
-            cls_BD_DAL Obj_BD_DAL = new cls_BD_DAL();
-            cls_BD_BLL Obj_BD_BLL = new cls_BD_BLL();
+            WCF.BDClient Obj_WCF = new BDClient();
 
+            Obj_CCSS_DAL.dtParametros = Obj_WCF.Get_DT_Param(Obj_CCSS_DAL.dtParametros);
 
-            Obj_BD_DAL.sNomSp = ConfigurationManager.AppSettings["eliminar_CCSS"].ToString();
-            Obj_BD_BLL.crearDTparametros(ref Obj_BD_DAL);
-            Obj_BD_DAL.obj_dtParametros.Rows.Add("@CED_JUR", "7", Obj_CCSS_DAL.sCed_Jur);
+            Obj_CCSS_DAL.dtParametros.Rows.Add("@CED_JUR", "7", Obj_CCSS_DAL.sCed_Jur);
 
-            Obj_BD_BLL.ExecCommand(ref Obj_BD_DAL);
+            Obj_CCSS_DAL.sMsjError = Obj_WCF.Ins_Upd_Delete(ConfigurationManager.AppSettings["eliminar_CCSS"], "NORMAL", Obj_CCSS_DAL.dtParametros);
 
-            Obj_CCSS_DAL.sMsgError = Obj_BD_DAL.sMsjError;
 
         }
-
-        public void listar_CCSS(ref cls_CCSS_DAL Obj_CCSS_DAL)
+        public void listar_filtrar_CCSS(ref cls_CCSS_DAL Obj_CCSS_DAL) // Listo
         {
-            cls_Empleados_DAL Obj_Caja = new cls_Empleados_DAL();
-            cls_BD_DAL Obj_BD_DAL = new cls_BD_DAL();
-            cls_BD_BLL Obj_BD_BLL = new cls_BD_BLL();
+            WCF.BDClient Obj_WCF = new BDClient();
 
-            if (Obj_CCSS_DAL.sDescripcion == string.Empty)
+            if (Obj_CCSS_DAL.sDescripcion == string.Empty) // Para Listar
             {
-
-                Obj_BD_DAL.sNomSp = ConfigurationManager.AppSettings["listar_CCSS"].ToString();
+                Obj_CCSS_DAL.dtParametros = null;
+                Obj_CCSS_DAL.dtDatos = Obj_WCF.ListarFiltrar("T_CCSS", "listar_CCSS", Obj_CCSS_DAL.dtParametros);
             }
-            else
+            else // Para filtrar
             {
-                Obj_BD_DAL.sNomSp = ConfigurationManager.AppSettings["filtrar_CCSS"].ToString();
-                Obj_BD_BLL.crearDTparametros(ref Obj_BD_DAL);
-                Obj_BD_DAL.obj_dtParametros.Rows.Add("@Filtro", "5", Obj_CCSS_DAL.sCed_Jur);
+                Obj_CCSS_DAL.dtParametros = Obj_WCF.Get_DT_Param(Obj_CCSS_DAL.dtParametros);
+                Obj_CCSS_DAL.dtParametros.Rows.Add("@Filtro", "5", Obj_CCSS_DAL.sCed_Jur);
+                Obj_CCSS_DAL.dtDatos = Obj_WCF.ListarFiltrar("T_CCSS", ConfigurationManager.AppSettings["listar_CCSS"], Obj_CCSS_DAL.dtParametros);
             }
-
-            Obj_BD_DAL.sNomTabla = "T_CCSS";
-
-            Obj_BD_BLL.ExecDataAdapter(ref Obj_BD_DAL);
-
-            if (Obj_BD_DAL.sMsjError == string.Empty)
-            {
-                Obj_CCSS_DAL.sMsgError = string.Empty;
-                Obj_CCSS_DAL.dtDatos = Obj_BD_DAL.obj_ds.Tables[0];
-            }
-            else
-            {
-                Obj_Caja.sMsgError = Obj_BD_DAL.sMsjError;
-                Obj_Caja.dtDatos = null;
-            }
-
-        }
-
-        public void listar_filtrar_CCSS(ref cls_CCSS_DAL Obj_CCSS_DAL)
-
-        {
-            cls_BD_DAL Obj_BD_DAL = new cls_BD_DAL();
-            cls_BD_BLL Obj_BD_BLL = new cls_BD_BLL();
-
-            Obj_BD_DAL.sNomSp = ConfigurationManager.AppSettings["listar_CCSS"].ToString();
-
-
-            Obj_BD_DAL.sNomTabla = "T_CCSS";
-
-            Obj_BD_BLL.ExecDataAdapter(ref Obj_BD_DAL);
-
-            if (Obj_BD_DAL.sMsjError == string.Empty)
-            {
-                Obj_CCSS_DAL.sMsgError = string.Empty;
-                Obj_CCSS_DAL.dtDatos = Obj_BD_DAL.obj_ds.Tables[0];
-            }
-            else
-            {
-                Obj_CCSS_DAL.sMsgError = Obj_BD_DAL.sMsjError;
-                Obj_CCSS_DAL.dtDatos = null;
-            }
-
         }
     }
+   }
 }
