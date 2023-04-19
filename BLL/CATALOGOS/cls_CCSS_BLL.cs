@@ -22,7 +22,7 @@ namespace BLL.CATALOGOS
             Obj_CCSS_DAL.dtParametros.Rows.Add("@PAGINA", "5", Obj_CCSS_DAL.sPagina);
             Obj_CCSS_DAL.dtParametros.Rows.Add("@DESCRIPCION", "5", Obj_CCSS_DAL.sDescripcion);
 
-            Obj_CCSS_DAL.sMsjError = Obj_WCF.Ins_Upd_Delete(ConfigurationManager.AppSettings["insertar_CCSS"], "NORMAL", Obj_CCSS_DAL.dtParametros);
+            Obj_CCSS_DAL.sMsjError = Obj_WCF.Ins_Upd_Delete(ConfigurationManager.AppSettings["insertar_CCSS"], "IDENTITY", Obj_CCSS_DAL.dtParametros);
 
         }
         public void modificar_CCSS(ref cls_CCSS_DAL Obj_CCSS_DAL) // Listo

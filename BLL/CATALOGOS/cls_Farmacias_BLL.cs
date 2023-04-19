@@ -41,7 +41,7 @@ namespace BLL.CATALOGOS
             Obj_Farmacia_DAL.dtParametros.Rows.Add("@NOMBRE", "7", Obj_Farmacia_DAL.sNombreFarmacia);
             Obj_Farmacia_DAL.dtParametros.Rows.Add("@MEDICAMENTOS", "7", Obj_Farmacia_DAL.sMedicamentos);
 
-            Obj_Farmacia_DAL.sMsjError = Obj_WCF.Ins_Upd_Delete(ConfigurationManager.AppSettings["Insertar_Farmacia"], "NORMAL", Obj_Farmacia_DAL.dtParametros);
+            Obj_Farmacia_DAL.sMsjError = Obj_WCF.Ins_Upd_Delete(ConfigurationManager.AppSettings["Insertar_Farmacia"], "IDENTITY", Obj_Farmacia_DAL.dtParametros);
 
         }
         public void modificar_Farmacia(ref cls_Farmacias_DAL Obj_Farmacia_DAL) //LISTO

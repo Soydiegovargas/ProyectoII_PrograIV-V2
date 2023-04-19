@@ -26,6 +26,7 @@ namespace BLL.CATALOGOS
                 Obj_Departamentos_DAL.dtParametros = Obj_WCF.Get_DT_Param(Obj_Departamentos_DAL.dtParametros);
                 Obj_Departamentos_DAL.dtParametros.Rows.Add("@FILTRO", "4", Obj_Departamentos_DAL.sEspecialidad);
                 Obj_Departamentos_DAL.dtDatos = Obj_WCF.ListarFiltrar("T_DEPARTAMENTOS", ConfigurationManager.AppSettings["Filtrar_DEPARTAMENTOS"], Obj_Departamentos_DAL.dtParametros);
+                
             }
 
         }
@@ -40,8 +41,8 @@ namespace BLL.CATALOGOS
             Obj_Departamentos_DAL.dtParametros.Rows.Add("@ESPECIALIDAD", "4", Obj_Departamentos_DAL.sEspecialidad);
             Obj_Departamentos_DAL.dtParametros.Rows.Add("@TELEFONO", "1", Convert.ToInt32(Obj_Departamentos_DAL.sTelefono));
 
-            Obj_Departamentos_DAL.sMsjError = Obj_WCF.Ins_Upd_Delete(ConfigurationManager.AppSettings["insertar_DEPARTAMENTOS"], "NORMAL", Obj_Departamentos_DAL.dtParametros);
-
+            Obj_Departamentos_DAL.sMsjError = Obj_WCF.Ins_Upd_Delete(ConfigurationManager.AppSettings["insertar_DEPARTAMENTOS"], "IDENTITY", Obj_Departamentos_DAL.dtParametros);
+            //Parametro "NORMAL" se usa solo para un UPDATE o un DELETE. Para un INSERT se usa algo diferente de "NORMAL",, puede ir vacio o nulo,o mejor aun poner IDENTITY
 
         }
         public void modificar_Departamentos(ref cls_Departamentos_DAL Obj_Departamentos_DAL) // LISTO
