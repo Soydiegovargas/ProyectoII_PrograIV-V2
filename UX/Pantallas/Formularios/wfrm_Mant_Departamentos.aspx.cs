@@ -13,10 +13,5 @@ namespace UX.Pantallas.Formularios
         {
 
         }
-
-        protected System.Void btn_filtrar Territorios_Click()
-        {
-
-        }
     }
 }
