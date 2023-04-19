@@ -21,7 +21,7 @@
         <asp:Button ID="btn_Juntas" runat="server" Text="Juntas" class="btn_General" OnClick="btn_Juntas_Click" />
         <asp:Button ID="btn_Pedidos" runat="server" Text="Pedidos" class="btn_General" OnClick="btn_Pedidos_Click" />
         <asp:Button ID="btn_Asegurados" runat="server" Text="Asegurados" class="btn_General" OnClick="btn_Asegurados_Click" />
-        <asp:Button ID="btn_Contratas" runat="server" Text="Contratas" class="btn_General" OnClick="btn_Contratas_Click" />
+        <asp:Button ID="btn_Contratos" runat="server" Text="Contratas" class="btn_General" OnClick="btn_Contratas_Click" />
         <asp:Button ID="btn_Empleados" runat="server" Text="Empleados" class="btn_General" OnClick="btn_Empleados_Click" />
         <asp:Button ID="btn_Especialidades" runat="server" Text="Especialidades" class="btn_General" OnClick="btn_Especialidades_Click" />
         
