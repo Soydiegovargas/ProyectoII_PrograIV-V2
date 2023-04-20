@@ -77,7 +77,7 @@ namespace UX.Pantallas.Formularios
 
         private void CargaCBoxDepartamentos()
         {
-          
+            
         }
     }
 }
