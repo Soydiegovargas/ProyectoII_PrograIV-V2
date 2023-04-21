@@ -17,6 +17,8 @@
             &nbsp;
             <input id="btn_editar" type="button" value="Habilitar Edición" OnClick="toggle()"/>
         </div>
+         <div> <asp:GridView ID="dgv_Departamentos" runat="server"></asp:GridView></div>
+              
          
          <br />
         <br />
@@ -40,7 +42,7 @@
                     &nbsp;
                     &nbsp;
                     &nbsp;
-                    &nbsp;<asp:DropDownList ID="ddl_Departamentos" runat="server" Height="53px" Width="386px">
+                    &nbsp;<asp:DropDownList ID="ddl_Departamentos" runat="server" Height="53px" Width="386px" >
                     </asp:DropDownList>
 &nbsp;<div style="text-align:center">
                          <asp:Button ID="btn_Guardar" runat="server" Text="Guardar" OnClick="btn_Guardar_Click"  />
@@ -51,8 +53,7 @@
                     &nbsp;
                     &nbsp;
             <p>
-               <asp:GridView ID="dgv_Departamentos" runat="server"></asp:GridView>
-            </p>
+                &nbsp;</p>
                 </div>
                 <br />
         
