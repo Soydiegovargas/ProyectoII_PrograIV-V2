@@ -21,13 +21,13 @@ namespace BLL.CATALOGOS
             if (Obj_Farmacia_DAL.sNombreFarmacia == string.Empty) //para listar
             {
                 Obj_Farmacia_DAL.dtParametros = null;
-                Obj_Farmacia_DAL.dtDatos = Obj_WCF.ListarFiltrar("T_FARMACIAS", "Listar_Farmacia", Obj_Farmacia_DAL.dtParametros);
+                Obj_Farmacia_DAL.dtDatos = Obj_WCF.ListarFiltrar("T_FARMACIAS",ConfigurationManager.AppSettings["Listar_Farmacia"], Obj_Farmacia_DAL.dtParametros);
             }
             else // Para Filtrar
             {
                 Obj_Farmacia_DAL.dtParametros = Obj_WCF.Get_DT_Param(Obj_Farmacia_DAL.dtParametros);
                 Obj_Farmacia_DAL.dtParametros.Rows.Add("@FILTRO", "7", Obj_Farmacia_DAL.sNombreFarmacia);
-                Obj_Farmacia_DAL.dtDatos = Obj_WCF.ListarFiltrar("T_FARMACIAS", "Filtrar_Farmacia", Obj_Farmacia_DAL.dtParametros);
+                Obj_Farmacia_DAL.dtDatos = Obj_WCF.ListarFiltrar("T_FARMACIAS", ConfigurationManager.AppSettings["Filtrar_Farmacia"], Obj_Farmacia_DAL.dtParametros);
             }
         }
         public void insertar_Farmacia(ref cls_Farmacias_DAL Obj_Farmacia_DAL) //LISTO
