@@ -13,178 +13,101 @@ namespace BLL.CATALOGOS
     {
 
 
-        //public void listar_filtrar_Centros(ref cls_Centros_DAL Obj_Centros_DAL)
-        //{
+        public void listar_filtrar_Centros(ref cls_Centros_DAL Obj_Centros_DAL) //LISTO
+        {
 
-        //    cls_Centros_DAL Obj_Centros = new cls_Centros_DAL();
+            WCF.BDClient Obj_WCF = new BDClient();
 
+            if (Obj_Centros_DAL.sCodCentro == string.Empty) // Para Listar si esta vacio
+            {
+                Obj_Centros_DAL.dtParametros = null;
+                Obj_Centros_DAL.dtDatos = Obj_WCF.ListarFiltrar("T_CENTROS", "listar_CENTROS", Obj_Centros_DAL.dtParametros);
+            }
+            else // Para filtrar
+            {
+                Obj_Centros_DAL.dtParametros = Obj_WCF.Get_DT_Param(Obj_Centros_DAL.dtParametros);
+                Obj_Centros_DAL.dtParametros.Rows.Add("@Filtro", "5", Obj_Centros_DAL.sCodCentro);
+                Obj_Centros_DAL.dtDatos = Obj_WCF.ListarFiltrar("T_CENTROS", ConfigurationManager.AppSettings["Filtrar_CENTROS"], Obj_Centros_DAL.dtParametros);
+            }
+        }
 
-        //    if (Obj_Centros_DAL.sCodCentro == string.Empty)
-        //    {
-        //        Obj_BD_DAL.sNomSp = ConfigurationManager.AppSettings["listar_CENTROS"].ToString();
+        public void listar_filtrar_CCSS(ref cls_CCSS_DAL Obj_CCSS_DAL) //listo
+        {
+            WCF.BDClient Obj_WCF = new BDClient();
 
-        //    }
-        //    else
-        //    {
+            if (Obj_CCSS_DAL.sDescripcion == string.Empty) // Para Listar si esta vacio
+            {
+                Obj_CCSS_DAL.dtParametros = null;
+                Obj_CCSS_DAL.dtDatos = Obj_WCF.ListarFiltrar("T_CCSS", "listar_CCSS", Obj_CCSS_DAL.dtParametros);
+            }
+            else // Para filtrar
+            {
+                Obj_CCSS_DAL.dtParametros = Obj_WCF.Get_DT_Param(Obj_CCSS_DAL.dtParametros);
+                Obj_CCSS_DAL.dtParametros.Rows.Add("@Filtro", "5", Obj_CCSS_DAL.sCed_Jur);
+                Obj_CCSS_DAL.dtDatos = Obj_WCF.ListarFiltrar("T_CCSS", ConfigurationManager.AppSettings["filtrar_CCSS"], Obj_CCSS_DAL.dtParametros);
+            }
 
-        //        Obj_BD_DAL.sNomSp = ConfigurationManager.AppSettings["Filtrar_CENTROS"].ToString();
-        //        Obj_BD_BLL.crearDTparametros(ref Obj_BD_DAL); //Crea el Datatable
-        //        Obj_BD_DAL.obj_dtParametros.Rows.Add("@FILTRO", "7", Obj_Centros_DAL.sCodCentro); //Mando los parámetros del Store Procedure
+        }
 
-        //    }
+        public void eliminar_Centros(ref cls_Centros_DAL Obj_Centros_DAL) //listo
+        {
 
-        //    Obj_BD_DAL.sNomTabla = "T_CENTROS";
+            WCF.BDClient Obj_WCF = new BDClient();
 
-        //    Obj_BD_BLL.ExecDataAdapter(ref Obj_BD_DAL);
+            Obj_Centros_DAL.dtParametros = Obj_WCF.Get_DT_Param(Obj_Centros_DAL.dtParametros);
 
-        //    if (Obj_BD_DAL.sMsjError == string.Empty)
-        //    {
-        //        Obj_Centros_DAL.sMsjError = string.Empty;
-        //        Obj_Centros_DAL.dtDatos = Obj_BD_DAL.obj_ds.Tables[0];
-        //    }
-        //    else
-        //    {
-        //        Obj_Centros_DAL.sMsjError = Obj_BD_DAL.sMsjError;
-        //        Obj_Centros_DAL.dtDatos = null;
-        //    }
-
-        //}
-
-        //public void listar_filtrar_CCSS(ref cls_Centros_DAL Obj_CCSS_DAL)
-        //{
-
-        //    cls_Centros_DAL Obj_Centros_DAL = new cls_Centros_DAL();
-        //    cls_BD_DAL Obj_BD_DAL = new cls_BD_DAL();
-        //    cls_BD_BLL Obj_BD_BLL = new cls_BD_BLL();
-
-
-        //    Obj_BD_DAL.sNomSp = ConfigurationManager.AppSettings["Listar_CCSS"].ToString();
-
-        //    Obj_BD_DAL.sNomTabla = "T_CCSS";
-
-        //    Obj_BD_BLL.ExecDataAdapter(ref Obj_BD_DAL);
-
-        //    if (Obj_BD_DAL.sMsjError == string.Empty)
-        //    {
-        //        Obj_CCSS_DAL.sMsjError = string.Empty;
-        //        Obj_CCSS_DAL.dtDatos = Obj_BD_DAL.obj_ds.Tables[0];
-        //    }
-        //    else
-        //    {
-        //        Obj_CCSS_DAL.sMsjError = Obj_BD_DAL.sMsjError;
-        //        Obj_CCSS_DAL.dtDatos = null;
-        //    }
-
-        //}
-
-        //public void eliminar_Centros(ref cls_Centros_DAL Obj_Centros_DAL)
-        //{
-
-
-        //    Obj_BD_DAL.sNomSp = ConfigurationManager.AppSettings["Eliminar_CENTRO"].ToString();
-        //    Obj_BD_BLL.crearDTparametros(ref Obj_BD_DAL); //Crea el Datatable
-        //    Obj_BD_DAL.obj_dtParametros.Rows.Add("@COD_CENTRO", "7", Obj_Centros_DAL.sCodCentro); //Mando los parámetros del Store Procedure
-
-        //    Obj_BD_BLL.ExecCommand(ref Obj_BD_DAL);
-
-        //    Obj_Centros_DAL.sMsjError = Obj_BD_DAL.sMsjError;
-
-
-        //}
-
-        //public void insertar_Centros(ref cls_Centros_DAL Obj_Centros_DAL)
-        //{
-        //    cls_BD_DAL Obj_BD_DAL = new cls_BD_DAL();
-        //    cls_BD_BLL Obj_BD_BLL = new cls_BD_BLL();
-
-        //    Obj_BD_DAL.sNomSp = ConfigurationManager.AppSettings["Insertar_CENTROS"].ToString();
-
-        //    Obj_BD_BLL.crearDTparametros(ref Obj_BD_DAL); //Crea el Datatable
-
-        //    Obj_BD_DAL.obj_dtParametros.Rows.Add("@COD_JUNTA", "7", Obj_Centros_DAL.sCodJunta);
-        //    Obj_BD_DAL.obj_dtParametros.Rows.Add("@CED_JUR", "7", Obj_Centros_DAL.sCedJur);
-        //    Obj_BD_DAL.obj_dtParametros.Rows.Add("@NOMBRE", "7", Obj_Centros_DAL.sNombreC);
-        //    Obj_BD_DAL.obj_dtParametros.Rows.Add("@DIRECCION", "7", Obj_Centros_DAL.sDirrecionC);
-        //    Obj_BD_DAL.obj_dtParametros.Rows.Add("@COD_CENTRO", "7", Obj_Centros_DAL.sCodCentro);
-
-        //    Obj_BD_BLL.ExecCommand(ref Obj_BD_DAL);
-
-        //    Obj_Centros_DAL.sMsjError = Obj_BD_DAL.sMsjError;
-        //}
-
-        //public void modificar_Centros(ref cls_Centros_DAL Obj_Centros_DAL)
-        //{
-        //    cls_BD_DAL Obj_BD_DAL = new cls_BD_DAL();
-        //    cls_BD_BLL Obj_BD_BLL = new cls_BD_BLL();
-
-        //    Obj_BD_DAL.sNomSp = ConfigurationManager.AppSettings["Modificar_CENTROS"].ToString();
-
-        //    Obj_BD_BLL.crearDTparametros(ref Obj_BD_DAL); //Crea el Datatable
-
-        //    Obj_BD_DAL.obj_dtParametros.Rows.Add("@COD_JUNTA", "7", Obj_Centros_DAL.sCodJunta);
-        //    Obj_BD_DAL.obj_dtParametros.Rows.Add("@CED_JUR", "7", Obj_Centros_DAL.sCedJur);
-        //    Obj_BD_DAL.obj_dtParametros.Rows.Add("@NOMBRE", "7", Obj_Centros_DAL.sNombreC);
-        //    Obj_BD_DAL.obj_dtParametros.Rows.Add("@DIRECCION", "7", Obj_Centros_DAL.sDirrecionC);
-        //    Obj_BD_DAL.obj_dtParametros.Rows.Add("@COD_CENTRO", "7", Obj_Centros_DAL.sCodCentro);
-
-        //    Obj_BD_BLL.ExecCommand(ref Obj_BD_DAL);
-
-        //    Obj_Centros_DAL.sMsjError = Obj_BD_DAL.sMsjError;
-        //}
-
-        //public void Listar_CCCS(ref cls_Centros_DAL Obj_Centros_DAL)
-        //{
-
-
-        //    Obj_BD_DAL.sNomSp = ConfigurationManager.AppSettings["listar_CCSS"].ToString();
-
-
-        //    Obj_BD_DAL.sNomTabla = "T_CCSS";
-
-        //    Obj_BD_BLL.ExecDataAdapter(ref Obj_BD_DAL);
-
-        //    if (Obj_BD_DAL.sMsjError == string.Empty)
-        //    {
-        //        Obj_Centros_DAL.sMsjError = string.Empty;
-        //        Obj_Centros_DAL.dtDatos = Obj_BD_DAL.obj_ds.Tables[0];
-        //    }
-        //    else
-        //    {
-        //        Obj_Centros_DAL.sMsjError = Obj_BD_DAL.sMsjError;
-        //        Obj_Centros_DAL.dtDatos = null;
-        //    }
+            Obj_Centros_DAL.dtParametros.Rows.Add("@COD_CENTRO", "7", Obj_Centros_DAL.sCodCentro);
 
 
 
+            Obj_Centros_DAL.sMsjError = Obj_WCF.Ins_Upd_Delete(ConfigurationManager.AppSettings["Eliminar_CENTRO"], "NORMAL", Obj_Centros_DAL.dtParametros);
+            
+        }
 
-        //}
+        public void insertar_Centros(ref cls_Centros_DAL Obj_Centros_DAL) //listo
+        {
+            WCF.BDClient Obj_WCF = new BDClient();
 
-        //public void Listar_JUNTA(ref cls_Centros_DAL Obj_Juntas_DAL)
-        //{
+            Obj_Centros_DAL.dtParametros = Obj_WCF.Get_DT_Param(Obj_Centros_DAL.dtParametros);
+
+            Obj_Centros_DAL.dtParametros.Rows.Add("@COD_JUNTA", "7", Obj_Centros_DAL.sCodJunta);
+            Obj_Centros_DAL.dtParametros.Rows.Add("@CED_JUR", "7", Obj_Centros_DAL.sCedJur);
+            Obj_Centros_DAL.dtParametros.Rows.Add("@NOMBRE", "7", Obj_Centros_DAL.sNombreC);
+            Obj_Centros_DAL.dtParametros.Rows.Add("@DIRECCION", "7", Obj_Centros_DAL.sDirrecionC);
+            Obj_Centros_DAL.dtParametros.Rows.Add("@COD_CENTRO", "7", Obj_Centros_DAL.sCodCentro);
+
+            Obj_Centros_DAL.sMsjError = Obj_WCF.Ins_Upd_Delete(ConfigurationManager.AppSettings["Insertar_CENTROS"], "IDENTITY", Obj_Centros_DAL.dtParametros);
+
+           
+        }
+
+        public void modificar_Centros(ref cls_Centros_DAL Obj_Centros_DAL) //listo
+        {
+            WCF.BDClient Obj_WCF = new BDClient();
+
+            Obj_Centros_DAL.dtParametros = Obj_WCF.Get_DT_Param(Obj_Centros_DAL.dtParametros);
+
+            Obj_Centros_DAL.dtParametros.Rows.Add("@COD_JUNTA", "7", Obj_Centros_DAL.sCodJunta);
+            Obj_Centros_DAL.dtParametros.Rows.Add("@CED_JUR", "7", Obj_Centros_DAL.sCedJur);
+            Obj_Centros_DAL.dtParametros.Rows.Add("@NOMBRE", "7", Obj_Centros_DAL.sNombreC);
+            Obj_Centros_DAL.dtParametros.Rows.Add("@DIRECCION", "7", Obj_Centros_DAL.sDirrecionC);
+            Obj_Centros_DAL.dtParametros.Rows.Add("@COD_CENTRO", "7", Obj_Centros_DAL.sCodCentro);
 
 
-        //    Obj_BD_DAL.sNomSp = ConfigurationManager.AppSettings["listar_Juntas"].ToString();
+            Obj_Centros_DAL.sMsjError = Obj_WCF.Ins_Upd_Delete(ConfigurationManager.AppSettings["Modificar_CENTROS"], "NORMAL", Obj_Centros_DAL.dtParametros);
 
+        }
 
-        //    Obj_BD_DAL.sNomTabla = "T_JUNTAS";
+        public void Listar_JUNTA(ref cls_Juntas_DAL Obj_Juntas_DAL)//listar
+        {
+            WCF.BDClient Obj_WCF = new BDClient();
 
-        //    Obj_BD_BLL.ExecDataAdapter(ref Obj_BD_DAL);
+            if (Obj_Juntas_DAL.sNombre == string.Empty) // Para Listar si esta vacio
+            {
+                Obj_Juntas_DAL.dtparametros = null;
+                Obj_Juntas_DAL.dtDatos = Obj_WCF.ListarFiltrar("T_JUNTAS", "listar_Juntas", Obj_Juntas_DAL.dtparametros);
+            }
 
-        //    if (Obj_BD_DAL.sMsjError == string.Empty)
-        //    {
-        //        Obj_Juntas_DAL.sMsjError = string.Empty;
-        //        Obj_Juntas_DAL.dtDatos = Obj_BD_DAL.obj_ds.Tables[0];
-        //    }
-        //    else
-        //    {
-        //        Obj_Juntas_DAL.sMsjError = Obj_BD_DAL.sMsjError;
-        //        Obj_Juntas_DAL.dtDatos = null;
-        //    }
-
-
-
-
-        //    //}
-        //}
+        }
     }
 }

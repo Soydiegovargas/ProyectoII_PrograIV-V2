@@ -13,7 +13,7 @@ namespace DAL.CATALOGOS
         #region VARIABLES PRIVADAS
         private char _cAxn;
         private string _sCod_Junta, _sCod_Centro, _sNombre, _sMsjError;
-        private DataTable _dtDatos;
+        private DataTable _dtDatos, _dtparametros;
         private int _iTelefono;
         #endregion
 
@@ -25,6 +25,7 @@ namespace DAL.CATALOGOS
         public string sMsjError { get => _sMsjError; set => _sMsjError = value; }
         public DataTable dtDatos { get => _dtDatos; set => _dtDatos = value; }
         public int iTelefono { get => _iTelefono; set => _iTelefono = value; }
+        public DataTable dtparametros { get => _dtparametros; set => _dtparametros = value; }
 
         #endregion
     }
