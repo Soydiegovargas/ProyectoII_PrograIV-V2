@@ -19,7 +19,7 @@ namespace BLL.CATALOGOS
             if (Obj_especidades_DAL.sdepartamento == string.Empty) // Para Listar si esta vacio
             {
                 Obj_especidades_DAL.dtParametros = null;
-                Obj_especidades_DAL.dtDatos = Obj_WCF.ListarFiltrar("T_ESPECIALIDADES", "listar_especialidades", Obj_especidades_DAL.dtParametros);
+                Obj_especidades_DAL.dtDatos = Obj_WCF.ListarFiltrar("T_ESPECIALIDADES", ConfigurationManager.AppSettings["listar_especialidades"], Obj_especidades_DAL.dtParametros);
             }
             else // Para filtrar
             {
@@ -28,7 +28,6 @@ namespace BLL.CATALOGOS
                 Obj_especidades_DAL.dtDatos = Obj_WCF.ListarFiltrar("T_ESPECIALIDADES", ConfigurationManager.AppSettings["filtrar_especialidades"], Obj_especidades_DAL.dtParametros);
             }
         }
-
 
         public void listar_filtrar_Empleados(ref cls_Empleados_DAL Obj_Empleados_DAL) //listo
         {
