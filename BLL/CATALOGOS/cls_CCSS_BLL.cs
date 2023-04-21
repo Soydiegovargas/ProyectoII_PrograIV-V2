@@ -11,6 +11,7 @@ namespace BLL.CATALOGOS
 {
     public class cls_CCSS_BLL
     {
+        //PRUEBA
         public void insertar_CCSS(ref cls_CCSS_DAL Obj_CCSS_DAL) // Listo
         {
             WCF.BDClient Obj_WCF = new BDClient();
