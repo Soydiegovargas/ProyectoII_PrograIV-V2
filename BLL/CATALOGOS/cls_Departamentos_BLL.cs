@@ -19,7 +19,7 @@ namespace BLL.CATALOGOS
             if (Obj_Departamentos_DAL.sEspecialidad == string.Empty)
             {
                 Obj_Departamentos_DAL.dtParametros = null;
-                Obj_Departamentos_DAL.dtDatos = Obj_WCF.ListarFiltrar("T_DEPARTAMENTOS", "Listar_DEPARTAMENTOS", Obj_Departamentos_DAL.dtParametros);
+                Obj_Departamentos_DAL.dtDatos = Obj_WCF.ListarFiltrar("T_DEPARTAMENTOS", "Listar_DEPARTAMENTOS", null);
             }
             else
             {

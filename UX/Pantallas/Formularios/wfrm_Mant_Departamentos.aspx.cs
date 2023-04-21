@@ -13,14 +13,13 @@ namespace UX.Pantallas.Formularios
 {
     public partial class wfrm_Mant_Departamentos : System.Web.UI.Page
     {
-        cls_Departamentos_DAL Obj_Depa_DAL = new cls_Departamentos_DAL();
-        cls_Departamentos_BLL Obj_Depa_BLL = new cls_Departamentos_BLL();
+        cls_Departamentos_DAL Obj_Departamentos_DAL = new cls_Departamentos_DAL();
 
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!Page.IsPostBack)
             {
-                Obj_Depa_DAL.sEspecialidad = "";
+                Obj_Departamentos_DAL.sEspecialidad = "";
                 cargaDatos();
                 CargaComboBoxDepartamentos();
             }
@@ -29,12 +28,14 @@ namespace UX.Pantallas.Formularios
 
         private void cargaDatos()
         {
-            Obj_Depa_DAL.sEspecialidad = txt_filtro.Text.Trim();
+            cls_Departamentos_DAL Obj_Departamentos_DAL = new cls_Departamentos_DAL();
+            cls_Departamentos_BLL Obj_Depa_BLL = new cls_Departamentos_BLL();
+            Obj_Departamentos_DAL.sEspecialidad = txt_filtro.Text.Trim();
 
-            Obj_Depa_BLL.listar_Filtrar_Departamentos(ref Obj_Depa_DAL);
+            Obj_Depa_BLL.listar_Filtrar_Departamentos(ref Obj_Departamentos_DAL);
 
             dgv_Departamentos.DataSource = null;
-            dgv_Departamentos.DataSource = Obj_Depa_DAL.dtDatos;
+            dgv_Departamentos.DataSource = Obj_Departamentos_DAL.dtDatos;
             dgv_Departamentos.DataBind();
 
         }
@@ -51,13 +52,13 @@ namespace UX.Pantallas.Formularios
 
         protected void txt_filtro_TextChanged(object sender, EventArgs e)
         {
-            Obj_Depa_DAL.sEspecialidad = txt_filtro.Text.Trim();
+            
             cargaDatos();
         }
 
         protected void btn_filtrar_Click(object sender, EventArgs e)
         {
-            Obj_Depa_DAL.sEspecialidad = txt_filtro.Text.Trim();
+            Obj_Departamentos_DAL.sEspecialidad = txt_filtro.Text.Trim();
             cargaDatos();
         }
 
@@ -76,20 +77,22 @@ namespace UX.Pantallas.Formularios
 
         private void CargaComboBoxDepartamentos()
         {
-            Obj_Depa_DAL.sEspecialidad = "";
-          
-            Obj_Depa_BLL.listar_Filtrar_Departamentos(ref Obj_Depa_DAL);
-            Obj_Depa_DAL.dtDatos.Rows.Add("0", "---Seleccione un Departamento---");
+            //    cls_Departamentos_DAL Obj_Departamentos_DAL = new cls_Departamentos_DAL();
+            //    cls_Departamentos_BLL Obj_Depa_BLL = new cls_Departamentos_BLL();
+            //    Obj_Departamentos_DAL.sEspecialidad = txt_filtro.Text.Trim();
 
-            ddl_Departamentos.DataSource = null;
-            ddl_Departamentos.DataTextField = "ESPECIALIDAD";
-            ddl_Departamentos.DataValueField = "COD_AREA";
-            ddl_Departamentos.DataSource = Obj_Depa_DAL.dtDatos;
-            ddl_Departamentos.DataBind();
+            //    Obj_Depa_BLL.listar_Filtrar_Departamentos(ref Obj_Departamentos_DAL);
+            //    Obj_Departamentos_DAL.dtDatos.Rows.Add("0", "---Seleccione un Departamento---");
 
-            ddl_Departamentos.SelectedValue = "0";
+            //    ddl_Departamentos.DataSource = null;
+            //    ddl_Departamentos.DataTextField = "ESPECIALIDAD";
+            //    ddl_Departamentos.DataValueField = "COD_AREA";
+            //    ddl_Departamentos.DataSource = Obj_Departamentos_DAL.dtDatos;
+            //    ddl_Departamentos.DataBind();
 
-            
+            //    ddl_Departamentos.SelectedValue = "0";
+
+
         }
 
         protected void dgv_Departamentos_SelectedIndexChanged(object sender, EventArgs e)

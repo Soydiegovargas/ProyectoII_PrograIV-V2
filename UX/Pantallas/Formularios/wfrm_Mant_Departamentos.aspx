@@ -17,18 +17,13 @@
             &nbsp;
             <input id="btn_editar" type="button" value="Habilitar Edición" OnClick="toggle()"/>
         </div>
-         <br />
-        
-        
-         <br />
-         <br />
-         <br />
+         
          <br />
         <br />
         <div>
             <div id="div_Editar" class="jumbotron" style="display:block">
                 <p class="lead">Edición de Datos de Regiones.</p>
-                <div style="height: 254px">
+                <div style="height: 401px">
                     <asp:Label ID="Label2" runat="server" Text="Id Departamento: "></asp:Label> 
                     &nbsp;
                     &nbsp;
@@ -53,15 +48,16 @@
                          &nbsp;
                          <asp:Button ID="txt_Eliminar" runat="server" Text="Eliminar" OnClick="txt_Eliminar_Click"/>
                     </div>
-                   
+                    &nbsp;
+                    &nbsp;
+            <p>
+               <asp:GridView ID="dgv_Departamentos" runat="server"></asp:GridView>
+            </p>
                 </div>
                 <br />
         
             </div>
 
-            <p>
-               <asp:GridView ID="dgv_Departamentos" runat="server" OnSelectedIndexChanged="dgv_Departamentos_SelectedIndexChanged"></asp:GridView>
-            </p>
         </div>
     </div>
     
