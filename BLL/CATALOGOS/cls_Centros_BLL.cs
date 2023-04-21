@@ -105,7 +105,9 @@ namespace BLL.CATALOGOS
             if (Obj_Juntas_DAL.sNombre == string.Empty) // Para Listar si esta vacio
             {
                 Obj_Juntas_DAL.dtparametros = null;
-                Obj_Juntas_DAL.dtDatos = Obj_WCF.ListarFiltrar("T_JUNTAS", "listar_Juntas", Obj_Juntas_DAL.dtparametros);
+              
+
+                Obj_Juntas_DAL.dtDatos = Obj_WCF.ListarFiltrar("T_JUNTAS", ConfigurationManager.AppSettings["listar_Juntas"], Obj_Juntas_DAL.dtparametros);
             }
 
         }
