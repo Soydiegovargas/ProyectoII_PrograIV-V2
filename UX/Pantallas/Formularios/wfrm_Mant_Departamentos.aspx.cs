@@ -20,8 +20,8 @@ namespace UX.Pantallas.Formularios
         {
             if (!Page.IsPostBack)
             {
-                txt_filtro.Text = string.Empty;
-                //cargaDatos();
+                Obj_Depa_DAL.sEspecialidad = "";
+                cargaDatos();
                 CargaComboBoxDepartamentos();
             }
 
