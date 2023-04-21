@@ -28,7 +28,49 @@ namespace BLL.CATALOGOS
                 Obj_especidades_DAL.dtDatos = Obj_WCF.ListarFiltrar("T_ESPECIALIDADES", ConfigurationManager.AppSettings["filtrar_especialidades"], Obj_especidades_DAL.dtParametros);
             }
         }
+        public void eliminar_especialidades(ref cls_Especialidades_DAL Obj_especialidades_DAL)//listo
+        {
 
+            WCF.BDClient Obj_WCF = new BDClient();
+
+            Obj_especialidades_DAL.dtParametros = Obj_WCF.Get_DT_Param(Obj_especialidades_DAL.dtParametros);
+
+            Obj_especialidades_DAL.dtParametros.Rows.Add("@ESPECIALIDAD", "7", Obj_especialidades_DAL.sespecialidad);
+
+            Obj_especialidades_DAL.sMsjError = Obj_WCF.Ins_Upd_Delete(ConfigurationManager.AppSettings["eliminar_especialidades"], "NORMAL", Obj_especialidades_DAL.dtParametros);
+
+        }
+        public void insertar_especialidades(ref cls_Especialidades_DAL Obj_especialidad_DAL) //LISTO
+        {
+            WCF.BDClient Obj_WCF = new BDClient();
+
+            Obj_especialidad_DAL.dtParametros = Obj_WCF.Get_DT_Param(Obj_especialidad_DAL.dtParametros);
+
+            Obj_especialidad_DAL.dtParametros.Rows.Add("@CED_EMPLEADO", "7", Obj_especialidad_DAL.scedempleado);
+            Obj_especialidad_DAL.dtParametros.Rows.Add("@ESPECIALIDAD", "4", Obj_especialidad_DAL.sespecialidad);
+            Obj_especialidad_DAL.dtParametros.Rows.Add("@DEPARTAMENTO", "4", Obj_especialidad_DAL.sdepartamento);
+
+
+            Obj_especialidad_DAL.sMsjError = Obj_WCF.Ins_Upd_Delete(ConfigurationManager.AppSettings["insertar_especialidades"], "IDENTITY", Obj_especialidad_DAL.dtParametros);
+
+
+        }
+        public void modificar_especialidades(ref cls_Especialidades_DAL Obj_especialidad_DAL)//listo
+        {
+            WCF.BDClient Obj_WCF = new BDClient();
+
+            Obj_especialidad_DAL.dtParametros = Obj_WCF.Get_DT_Param(Obj_especialidad_DAL.dtParametros);
+
+
+            Obj_especialidad_DAL.dtParametros.Rows.Add("@CED_EMPLEADO", "7", Obj_especialidad_DAL.scedempleado);
+            Obj_especialidad_DAL.dtParametros.Rows.Add("@ESPECIALIDAD", "4", Obj_especialidad_DAL.sespecialidad);
+            Obj_especialidad_DAL.dtParametros.Rows.Add("@DEPARTAMENTO", "4", Obj_especialidad_DAL.sdepartamento);
+
+
+            Obj_especialidad_DAL.sMsjError = Obj_WCF.Ins_Upd_Delete(ConfigurationManager.AppSettings["modificar_especialidades"], "NORMAL", Obj_especialidad_DAL.dtParametros);
+
+
+        }
         public void listar_filtrar_Empleados(ref cls_Empleados_DAL Obj_Empleados_DAL) //listo
         {
             WCF.BDClient Obj_WCF = new BDClient(); // se crea el objeto de manejo de la BD
@@ -47,51 +89,5 @@ namespace BLL.CATALOGOS
 
         }
 
-        public void eliminar_especialidades(ref cls_Especialidades_DAL Obj_especialidades_DAL)//listo
-        {
-
-            WCF.BDClient Obj_WCF = new BDClient();
-
-            Obj_especialidades_DAL.dtParametros = Obj_WCF.Get_DT_Param(Obj_especialidades_DAL.dtParametros);
-
-            Obj_especialidades_DAL.dtParametros.Rows.Add("@ESPECIALIDAD", "7", Obj_especialidades_DAL.sespecialidad);
-
-            Obj_especialidades_DAL.sMsjError = Obj_WCF.Ins_Upd_Delete(ConfigurationManager.AppSettings["eliminar_especialidades"], "NORMAL", Obj_especialidades_DAL.dtParametros);
-
-        }
-
-        public void insertar_especialidades(ref cls_Especialidades_DAL Obj_especialidad_DAL) //LISTO
-        {
-            WCF.BDClient Obj_WCF = new BDClient();
-
-            Obj_especialidad_DAL.dtParametros = Obj_WCF.Get_DT_Param(Obj_especialidad_DAL.dtParametros);
-
-            Obj_especialidad_DAL.dtParametros.Rows.Add("@CED_EMPLEADO", "7", Obj_especialidad_DAL.scedempleado);
-            Obj_especialidad_DAL.dtParametros.Rows.Add("@ESPECIALIDAD", "4", Obj_especialidad_DAL.sespecialidad);
-            Obj_especialidad_DAL.dtParametros.Rows.Add("@DEPARTAMENTO", "4", Obj_especialidad_DAL.sdepartamento);
-
-
-            Obj_especialidad_DAL.sMsjError = Obj_WCF.Ins_Upd_Delete(ConfigurationManager.AppSettings["insertar_especialidades"], "IDENTITY", Obj_especialidad_DAL.dtParametros);
-
-
-        }
-
-        public void modificar_especialidades(ref cls_Especialidades_DAL Obj_especialidad_DAL)//listo
-        {
-            WCF.BDClient Obj_WCF = new BDClient();
-
-            Obj_especialidad_DAL.dtParametros = Obj_WCF.Get_DT_Param(Obj_especialidad_DAL.dtParametros);
-
-
-            Obj_especialidad_DAL.dtParametros.Rows.Add("@CED_EMPLEADO", "7", Obj_especialidad_DAL.scedempleado);
-            Obj_especialidad_DAL.dtParametros.Rows.Add("@ESPECIALIDAD", "4", Obj_especialidad_DAL.sespecialidad);
-            Obj_especialidad_DAL.dtParametros.Rows.Add("@DEPARTAMENTO", "4", Obj_especialidad_DAL.sdepartamento);
-
-
-            Obj_especialidad_DAL.sMsjError = Obj_WCF.Ins_Upd_Delete(ConfigurationManager.AppSettings["modificar_especialidades"], "NORMAL", Obj_especialidad_DAL.dtParametros);
-
-
-        }
-       
     }
 }
