@@ -10,9 +10,9 @@ namespace DAL.CATALOGOS
     public class cls_Empleados_DAL
     {
         #region VARIABLES PRIVADAS
-        private string _sCed_Empleado, _sNombre, _sDireccion, _sCod_Junta, _sMsgError;
+        private string _sCed_Empleado, _sNombre, _sDireccion, _sCod_Junta, _sMsjError;
         private int _iTelefono;
-        private DataTable _dtDatos;
+        private DataTable _dtDatos, _dtParametros;
         private char _cOpcion;
         #endregion
 
@@ -24,7 +24,8 @@ namespace DAL.CATALOGOS
         public int iTelefono { get => _iTelefono; set => _iTelefono = value; }
         public DataTable dtDatos { get => _dtDatos; set => _dtDatos = value; }
         public char cOpcion { get => _cOpcion; set => _cOpcion = value; }
-        public string sMsgError { get => _sMsgError; set => _sMsgError = value; }
+        public string sMsjError { get => _sMsjError; set => _sMsjError = value; }
+        public DataTable dtParametros { get => _dtParametros; set => _dtParametros = value; }
         #endregion
     }
 }

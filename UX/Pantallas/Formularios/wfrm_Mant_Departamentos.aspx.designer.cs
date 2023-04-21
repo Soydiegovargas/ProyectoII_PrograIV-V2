@@ -42,15 +42,6 @@ namespace UX.Pantallas.Formularios
         protected global::System.Web.UI.WebControls.Button btn_filtrar;
 
         /// <summary>
-        /// dgv_Departamentos control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView dgv_Departamentos;
-
-        /// <summary>
         /// Label2 control.
         /// </summary>
         /// <remarks>
@@ -96,13 +87,13 @@ namespace UX.Pantallas.Formularios
         protected global::System.Web.UI.WebControls.Label Label4;
 
         /// <summary>
-        /// ddl_Regiones control.
+        /// ddl_Departamentos control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddl_Regiones;
+        protected global::System.Web.UI.WebControls.DropDownList ddl_Departamentos;
 
         /// <summary>
         /// btn_Guardar control.
@@ -121,5 +112,14 @@ namespace UX.Pantallas.Formularios
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button txt_Eliminar;
+
+        /// <summary>
+        /// dgv_Departamentos control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView dgv_Departamentos;
     }
 }

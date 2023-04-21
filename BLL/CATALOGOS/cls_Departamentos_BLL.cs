@@ -24,7 +24,7 @@ namespace BLL.CATALOGOS
             else
             {
                 Obj_Departamentos_DAL.dtParametros = Obj_WCF.Get_DT_Param(Obj_Departamentos_DAL.dtParametros);
-                Obj_Departamentos_DAL.dtParametros.Rows.Add("@FILTRO", "4", Obj_Departamentos_DAL.sEspecialidad);
+                Obj_Departamentos_DAL.dtParametros.Rows.Add("@Filtro", "4", Obj_Departamentos_DAL.sEspecialidad);
                 Obj_Departamentos_DAL.dtDatos = Obj_WCF.ListarFiltrar("T_DEPARTAMENTOS", ConfigurationManager.AppSettings["Filtrar_DEPARTAMENTOS"], Obj_Departamentos_DAL.dtParametros);
                 
             }

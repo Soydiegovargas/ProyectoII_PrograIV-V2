@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="c852cb76-349d-4524-8aa2-1dd962235e2c" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="2fba4095-3d07-44ce-ba9c-d81fdcce68d3" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,10 +22,10 @@
     <MetadataSource Address="http://localhost:83/WCF__BD.svc?wsdl" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="WCF__BD.xsd" MetadataType="Schema" ID="ee34b796-fa30-475d-b73b-66483c721bea" SourceId="1" SourceUrl="http://localhost:83/WCF__BD.svc?xsd=xsd2" />
-    <MetadataFile FileName="WCF__BD1.xsd" MetadataType="Schema" ID="0692139b-14ea-4481-b800-ae77e03d03b0" SourceId="1" SourceUrl="http://localhost:83/WCF__BD.svc?xsd=xsd0" />
-    <MetadataFile FileName="BD.wsdl" MetadataType="Wsdl" ID="bc476919-f08f-461e-80e1-a3e005835ee8" SourceId="1" SourceUrl="http://localhost:83/WCF__BD.svc?wsdl" />
-    <MetadataFile FileName="WCF__BD2.xsd" MetadataType="Schema" ID="17deff86-18ca-460d-b3cc-49116c1133ca" SourceId="1" SourceUrl="http://localhost:83/WCF__BD.svc?xsd=xsd1" />
+    <MetadataFile FileName="WCF__BD.xsd" MetadataType="Schema" ID="c5528f97-dc81-4538-8061-f768861e5a50" SourceId="1" SourceUrl="http://localhost:83/WCF__BD.svc?xsd=xsd2" />
+    <MetadataFile FileName="WCF__BD1.xsd" MetadataType="Schema" ID="052ef1cc-312e-420c-b506-ea479da433c1" SourceId="1" SourceUrl="http://localhost:83/WCF__BD.svc?xsd=xsd0" />
+    <MetadataFile FileName="BD.wsdl" MetadataType="Wsdl" ID="bb4aa010-bb47-441b-9dcb-7528a08768db" SourceId="1" SourceUrl="http://localhost:83/WCF__BD.svc?wsdl" />
+    <MetadataFile FileName="WCF__BD2.xsd" MetadataType="Schema" ID="9735c754-93b7-4f90-9de3-038455ffcf9b" SourceId="1" SourceUrl="http://localhost:83/WCF__BD.svc?xsd=xsd1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
