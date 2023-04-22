@@ -5,40 +5,31 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Configuration;
 using DAL.CATALOGOS;
+using BLL.WCF;
 
 namespace BLL.CATALOGOS
 {
     public class cls_Asegurados_BLL
     {
-        //cls_BD_DAL Obj_BD_DAL = new cls_BD_DAL();
-        //cls_BD_BLL Obj_BD_BLL = new cls_BD_BLL();
+        public void listar_filtrar_Asegurados(ref cls_Asegurados_DAL Obj_Asegurados_DAL) //LISTO
+        {
 
-        //public void listar_Asegurados(ref cls_Asegurados_DAL Obj_Asegurados_DAL)
-        //{
+            WCF.BDClient Obj_WCF = new BDClient();
 
-        //    //cls_BD_DAL Obj_BD_DAL = new cls_BD_DAL();
-        //    //cls_BD_BLL Obj_BD_BLL = new cls_BD_BLL();
+            if (Obj_Asegurados_DAL.sCedAsegurado == string.Empty) // Para Listar si esta vacio
+            {
+                Obj_Asegurados_DAL.dtParametros = null;
+                Obj_Asegurados_DAL.dtDatos = Obj_WCF.ListarFiltrar("T_ASEGURADOS", ConfigurationManager.AppSettings["Listar_ASEGURADOS"], Obj_Asegurados_DAL.dtParametros);
+            }
+            else // Para filtrar
+            {
+                Obj_Asegurados_DAL.dtParametros = Obj_WCF.Get_DT_Param(Obj_Asegurados_DAL.dtParametros);
+                Obj_Asegurados_DAL.dtParametros.Rows.Add("@Filtro", "7", Obj_Asegurados_DAL.sCodCentro);
+                Obj_Asegurados_DAL.dtDatos = Obj_WCF.ListarFiltrar("T_ASEGURADOS", ConfigurationManager.AppSettings["Filtrar_ASEGURADOS"], Obj_Asegurados_DAL.dtParametros);
+            }
+        }
 
-        //    Obj_BD_DAL.sNomSp = ConfigurationManager.AppSettings["Listar_ASEGURADOS"].ToString();
-        //    Obj_BD_BLL.crearDTparametros(ref Obj_BD_DAL);
-        //    Obj_BD_DAL.sNomTabla = "T_Asegurados";
-
-
-        //    Obj_BD_BLL.ExecDataAdapter(ref Obj_BD_DAL);
-
-        //    if (Obj_BD_DAL.sMsjError == string.Empty)
-        //    {
-        //        Obj_Asegurados_DAL.sMsjError = string.Empty;
-        //        Obj_Asegurados_DAL.dtDatos = Obj_BD_DAL.obj_ds.Tables[0];
-        //    }
-        //    else
-        //    {
-        //        Obj_Asegurados_DAL.sMsjError = Obj_BD_DAL.sMsjError;
-        //        Obj_Asegurados_DAL.dtDatos = null;
-        //    }
-
-
-        //}
+        
         //public void filtrar_Asegurados(ref cls_Asegurados_DAL Obj_Asegurados_DAL)
         //{
         //    // cls_Asegurados_DAL Obj_Asegurados = new cls_Asegurados_DAL();
