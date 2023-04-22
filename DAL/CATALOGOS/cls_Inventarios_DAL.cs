@@ -29,6 +29,7 @@ namespace DAL.CATALOGOS
         public int iCantidad { get => _iCantidad; set => _iCantidad = value; }
         public DateTime date { get => _dt_Date; set => _dt_Date = value; }
         public string sCod_Farmacia { get => _sCod_Farmacia; set => _sCod_Farmacia = value; }
+        public DataTable dtParametros;
 
 
 

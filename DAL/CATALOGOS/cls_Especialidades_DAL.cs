@@ -9,10 +9,11 @@ namespace DAL.CATALOGOS
 {
     public class cls_Especialidades_DAL
     {
+        public object sCod_Medicina;
         #region VARIABLES PRIVADAS
         private char _cAxn;
         private string _scedempleado, _sespecialidad, _sdepartamento, _sMsjError;
-        private DataTable _dtDatos;
+        private DataTable _dtDatos, _dtParametros;
         #endregion
         
         #region VARIABLES PUBLICAS
@@ -22,6 +23,7 @@ namespace DAL.CATALOGOS
         public string sdepartamento { get => _sdepartamento; set => _sdepartamento = value; }
         public string sMsjError { get => _sMsjError; set => _sMsjError = value; }
         public DataTable dtDatos { get => _dtDatos; set => _dtDatos = value; }
+        public DataTable dtParametros { get => _dtParametros; set => _dtParametros = value; }
         #endregion
     }
 }

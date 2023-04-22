@@ -13,7 +13,7 @@ namespace DAL.CATALOGOS
 
         private char _cAxn;
         private string _scodfarmacia, _scodpedido, _sMedicamnetos, _sMsjError;
-        private DataTable _dtDatos;
+        private DataTable _dtDatos, _dtparametros;
         #endregion
 
         #region VARIABLES PUBLICAS
@@ -21,8 +21,10 @@ namespace DAL.CATALOGOS
         public string scodfarmacia { get => _scodfarmacia; set => _scodfarmacia = value; }
         public string scodpedido { get => _scodpedido; set => _scodpedido = value; }
         public string sMedicamnetos { get => _sMedicamnetos; set => _sMedicamnetos = value; }
-        public DataTable dtDatos { get => _dtDatos; set => _dtDatos = value; }
+        public DataTable dtDatos { get => DtDatos; set => DtDatos = value; }
+        public DataTable DtDatos { get => _dtDatos; set => _dtDatos = value; }
         public string sMsjError { get => _sMsjError; set => _sMsjError = value; }
+        public DataTable dtparametros { get => _dtparametros; set => _dtparametros = value; }
         #endregion
     }
 }

@@ -32,6 +32,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
@@ -44,7 +45,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CATALOGOS\cls_Asegurados_BLL.cs" />
-    <Compile Include="CATALOGOS\CLS_BD_DAL_PRUEBA.cs" />
     <Compile Include="CATALOGOS\cls_CCSS_BLL.cs" />
     <Compile Include="CATALOGOS\cls_Centros_BLL.cs" />
     <Compile Include="CATALOGOS\cls_Contratas_BLL.cs" />
