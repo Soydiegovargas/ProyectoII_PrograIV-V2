@@ -4,103 +4,79 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DAL.CATALOGOS;
+using System.Configuration;
+using BLL.WCF;
 
 namespace BLL.CATALOGOS
 {
    public class cls_Contratas_BLL
     {
-        //public void listar_filtrar_Contratas(ref cls_Contratas_DAL Obj_Contratas_DAL)
-        //{
-        //    cls_Contratas_DAL Obj_Contratas = new cls_Contratas_DAL();
-        //    cls_BD_DAL Obj_BD_DAL = new cls_BD_DAL();
-        //    cls_BD_BLL Obj_BD_BLL = new cls_BD_BLL();
+        public void listar_filtrar_Contratas(ref cls_Contratas_DAL Obj_Contratas_DAL)
+        {
 
-        //    if (Obj_Contratas_DAL.sCedula == string.Empty)
-        //    {
-        //        Obj_BD_DAL.sNomSp = ConfigurationManager.AppSettings["listar_CONTRATAS"].ToString();
+            WCF.BDClient Obj_WCF = new BDClient();
 
-        //    }
-        //    else
-        //    {
-
-        //        Obj_BD_DAL.sNomSp = ConfigurationManager.AppSettings["Filtrar_CONTRATAS"].ToString();
-        //        Obj_BD_BLL.crearDTparametros(ref Obj_BD_DAL); //Crea el Datatable
-        //        Obj_BD_DAL.obj_dtParametros.Rows.Add("@FILTRO", "5", Obj_Contratas_DAL.sCedula); //Mando los parámetros del Store Procedure
-
-        //    }
-
-        //    Obj_BD_DAL.sNomTabla = "T_CONTRATAS";
-
-        //    Obj_BD_BLL.ExecDataAdapter(ref Obj_BD_DAL);
-
-        //    if (Obj_BD_DAL.sMsjError == string.Empty)
-        //    {
-        //        Obj_Contratas_DAL.sMsjError = string.Empty;
-        //        Obj_Contratas_DAL.dtDatos = Obj_BD_DAL.obj_ds.Tables[0];
-        //    }
-        //    else
-        //    {
-        //        Obj_Contratas_DAL.sMsjError = Obj_BD_DAL.sMsjError;
-        //        Obj_Contratas_DAL.dtDatos = null;
-        //    }
-
-        //}
-
-        //public void eliminar_Contratas(ref cls_Contratas_DAL Obj_Contratas_DAL)
-        //{
-        //    cls_BD_DAL Obj_BD_DAL = new cls_BD_DAL();
-        //    cls_BD_BLL Obj_BD_BLL = new cls_BD_BLL();
-
-        //    Obj_BD_DAL.sNomSp = ConfigurationManager.AppSettings["Eliminar_CONTRATAS"].ToString();
-        //    Obj_BD_BLL.crearDTparametros(ref Obj_BD_DAL); //Crea el Datatable
-        //    Obj_BD_DAL.obj_dtParametros.Rows.Add("@CED_PERSONAL", "7", Obj_Contratas_DAL.sCedula); //Mando los parámetros del Store Procedure
-
-        //    Obj_BD_BLL.ExecCommand(ref Obj_BD_DAL);
-
-        //    Obj_Contratas_DAL.sMsjError = Obj_BD_DAL.sMsjError;
+            if (Obj_Contratas_DAL.sCedula == string.Empty) // Para Listar si esta vacio
+            {
+                Obj_Contratas_DAL.dtParametros = null;
+                Obj_Contratas_DAL.dtDatos = Obj_WCF.ListarFiltrar("T_CONTRATAS", "listar_CONTRATAS", Obj_Contratas_DAL.dtParametros);
+            }
+            else // Para filtrar
+            {
+                Obj_Contratas_DAL.dtParametros = Obj_WCF.Get_DT_Param(Obj_Contratas_DAL.dtParametros);
+                Obj_Contratas_DAL.dtParametros.Rows.Add("@Filtro", "5", Obj_Contratas_DAL.sCedula);
+                Obj_Contratas_DAL.dtDatos = Obj_WCF.ListarFiltrar("T_CONTRATAS", ConfigurationManager.AppSettings["Filtrar_CONTRATAS"], Obj_Contratas_DAL.dtParametros);
+            }
 
 
-        //}
+        }
 
-        //public void insertar_Contratas(ref cls_Contratas_DAL Obj_Contratas_DAL)
-        //{
-        //    cls_BD_DAL Obj_BD_DAL = new cls_BD_DAL();
-        //    cls_BD_BLL Obj_BD_BLL = new cls_BD_BLL();
+        public void eliminar_Contratas(ref cls_Contratas_DAL Obj_Contratas_DAL)
+        {
+            WCF.BDClient Obj_WCF = new BDClient();
 
-        //    Obj_BD_DAL.sNomSp = ConfigurationManager.AppSettings["Insertar_CONTRATAS"].ToString();
+            Obj_Contratas_DAL.dtParametros = Obj_WCF.Get_DT_Param(Obj_Contratas_DAL.dtParametros);
 
-        //    Obj_BD_BLL.crearDTparametros(ref Obj_BD_DAL); //Crea el Datatable
+            Obj_Contratas_DAL.dtParametros.Rows.Add("@CED_PERSONAL", "7", Obj_Contratas_DAL.sCedula);
 
-        //    Obj_BD_DAL.obj_dtParametros.Rows.Add("@CED_PERSONAL", "7", Obj_Contratas_DAL.sCedula);
-        //    Obj_BD_DAL.obj_dtParametros.Rows.Add("@NOMBRE", "7", Obj_Contratas_DAL.sNombreCon);
-        //    Obj_BD_DAL.obj_dtParametros.Rows.Add("@TELEFONO", "4", Obj_Contratas_DAL.sTelefono);
-        //    Obj_BD_DAL.obj_dtParametros.Rows.Add("@DIRECCION", "7", Obj_Contratas_DAL.sDireccion);
-        //    Obj_BD_DAL.obj_dtParametros.Rows.Add("@COD_JUNTA", "7", Obj_Contratas_DAL.sCodJunta);
 
-        //    Obj_BD_BLL.ExecCommand(ref Obj_BD_DAL);
 
-        //    Obj_Contratas_DAL.sMsjError = Obj_BD_DAL.sMsjError;
-        //}
+            Obj_Contratas_DAL.sMsjError = Obj_WCF.Ins_Upd_Delete(ConfigurationManager.AppSettings["Eliminar_CONTRATAS"], "NORMAL", Obj_Contratas_DAL.dtParametros);
 
-        //public void modificar_Contratas(ref cls_Contratas_DAL Obj_Contratas_DAL)
-        //{
-        //    cls_BD_DAL Obj_BD_DAL = new cls_BD_DAL();
-        //    cls_BD_BLL Obj_BD_BLL = new cls_BD_BLL();
 
-        //    Obj_BD_DAL.sNomSp = ConfigurationManager.AppSettings["Modificar_CONTRATAS"].ToString();
+        }
 
-        //    Obj_BD_BLL.crearDTparametros(ref Obj_BD_DAL); //Crea el Datatable
+        public void insertar_Contratas(ref cls_Contratas_DAL Obj_Contratas_DAL)
+        {
+            WCF.BDClient Obj_WCF = new BDClient();
 
-        //    Obj_BD_DAL.obj_dtParametros.Rows.Add("@CED_PERSONAL", "7", Obj_Contratas_DAL.sCedula);
-        //    Obj_BD_DAL.obj_dtParametros.Rows.Add("@NOMBRE", "7", Obj_Contratas_DAL.sNombreCon);
-        //    Obj_BD_DAL.obj_dtParametros.Rows.Add("@TELEFONO", "4", Obj_Contratas_DAL.sTelefono);
-        //    Obj_BD_DAL.obj_dtParametros.Rows.Add("@DIRECCION", "7", Obj_Contratas_DAL.sDireccion);
-        //    Obj_BD_DAL.obj_dtParametros.Rows.Add("@COD_JUNTA", "7", Obj_Contratas_DAL.sCodJunta);
+            Obj_Contratas_DAL.dtParametros = Obj_WCF.Get_DT_Param(Obj_Contratas_DAL.dtParametros);
 
-        //    Obj_BD_BLL.ExecCommand(ref Obj_BD_DAL);
 
-        //    Obj_Contratas_DAL.sMsjError = Obj_BD_DAL.sMsjError;
-        //}
+
+            Obj_Contratas_DAL.dtParametros.Rows.Add("@CED_PERSONAL", "7", Obj_Contratas_DAL.sCedula);
+            Obj_Contratas_DAL.dtParametros.Rows.Add("@NOMBRE", "7", Obj_Contratas_DAL.sNombreCon);
+            Obj_Contratas_DAL.dtParametros.Rows.Add("@TELEFONO", "4", Obj_Contratas_DAL.sTelefono);
+            Obj_Contratas_DAL.dtParametros.Rows.Add("@DIRECCION", "7", Obj_Contratas_DAL.sDireccion);
+            Obj_Contratas_DAL.dtParametros.Rows.Add("@COD_JUNTA", "7", Obj_Contratas_DAL.sCodJunta);
+
+            Obj_Contratas_DAL.sMsjError = Obj_WCF.Ins_Upd_Delete(ConfigurationManager.AppSettings["Insertar_CONTRATAS"], "IDENTITY", Obj_Contratas_DAL.dtParametros);
+        }
+
+        public void modificar_Contratas(ref cls_Contratas_DAL Obj_Contratas_DAL)
+        {
+            WCF.BDClient Obj_WCF = new BDClient();
+
+            Obj_Contratas_DAL.dtParametros = Obj_WCF.Get_DT_Param(Obj_Contratas_DAL.dtParametros);
+
+            Obj_Contratas_DAL.dtParametros.Rows.Add("@CED_PERSONAL", "7", Obj_Contratas_DAL.sCedula);
+            Obj_Contratas_DAL.dtParametros.Rows.Add("@NOMBRE", "7", Obj_Contratas_DAL.sNombreCon);
+            Obj_Contratas_DAL.dtParametros.Rows.Add("@TELEFONO", "4", Obj_Contratas_DAL.sTelefono);
+            Obj_Contratas_DAL.dtParametros.Rows.Add("@DIRECCION", "7", Obj_Contratas_DAL.sDireccion);
+            Obj_Contratas_DAL.dtParametros.Rows.Add("@COD_JUNTA", "7", Obj_Contratas_DAL.sCodJunta);
+
+            Obj_Contratas_DAL.sMsjError = Obj_WCF.Ins_Upd_Delete(ConfigurationManager.AppSettings["Modificar_CONTRATAS"], "NORMAL", Obj_Contratas_DAL.dtParametros);
+        }
 
     }
 }
