@@ -11,12 +11,12 @@ namespace DAL.CATALOGOS
 {
     public class cls_Departamentos_DAL
     {
+        public object sCod_Medicina;
         #region VARIABLES PRIVADAS
         private char _cAxn;
-        private string _sEspecialidad, _sMsjError, _sTelefono, _sCodCentro;
+        private string _sEspecialidad, _sMsjError, _sTelefono, _sCodCentro, _sCodArea;
         private int _iCodArea, _iTelef;
         private DataTable _dtDatos, _dtParametros;
-        private string _sCodArea;
         #endregion
 
         #region VARIABLES PUBLICAS

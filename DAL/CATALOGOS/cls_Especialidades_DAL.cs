@@ -9,6 +9,7 @@ namespace DAL.CATALOGOS
 {
     public class cls_Especialidades_DAL
     {
+        public object sCod_Medicina;
         #region VARIABLES PRIVADAS
         private char _cAxn;
         private string _scedempleado, _sespecialidad, _sdepartamento, _sMsjError;
