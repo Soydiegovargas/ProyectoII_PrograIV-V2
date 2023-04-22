@@ -17,18 +17,15 @@
             &nbsp;
             <input id="btn_editar" type="button" value="Habilitar Edición" OnClick="toggle()"/>
         </div>
-         <br />
-        
-        
-         <br />
-         <br />
-         <br />
+         <div> <asp:GridView ID="dgv_Departamentos" runat="server"></asp:GridView></div>
+              
+         
          <br />
         <br />
         <div>
             <div id="div_Editar" class="jumbotron" style="display:block">
                 <p class="lead">Edición de Datos de Regiones.</p>
-                <div style="height: 254px">
+                <div style="height: 401px">
                     <asp:Label ID="Label2" runat="server" Text="Id Departamento: "></asp:Label> 
                     &nbsp;
                     &nbsp;
@@ -45,7 +42,7 @@
                     &nbsp;
                     &nbsp;
                     &nbsp;
-                    &nbsp;<asp:DropDownList ID="ddl_Departamentos" runat="server" Height="53px" Width="386px">
+                    &nbsp;<asp:DropDownList ID="ddl_Departamentos" runat="server" Height="53px" Width="386px" >
                     </asp:DropDownList>
 &nbsp;<div style="text-align:center">
                          <asp:Button ID="btn_Guardar" runat="server" Text="Guardar" OnClick="btn_Guardar_Click"  />
@@ -53,15 +50,15 @@
                          &nbsp;
                          <asp:Button ID="txt_Eliminar" runat="server" Text="Eliminar" OnClick="txt_Eliminar_Click"/>
                     </div>
-                   
+                    &nbsp;
+                    &nbsp;
+            <p>
+                &nbsp;</p>
                 </div>
                 <br />
         
             </div>
 
-            <p>
-               <asp:GridView ID="dgv_Departamentos" runat="server" OnSelectedIndexChanged="dgv_Departamentos_SelectedIndexChanged"></asp:GridView>
-            </p>
         </div>
     </div>
     

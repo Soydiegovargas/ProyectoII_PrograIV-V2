@@ -3,14 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using BLL.WCF;
 using DAL.CATALOGOS;
+using BLL.WCF;
 using System.Configuration;
 
 namespace BLL.CATALOGOS
 {
    public class cls_Departamentos_BLL
     {
+
         public void listar_Filtrar_Departamentos(ref cls_Departamentos_DAL Obj_Departamentos_DAL) //LISTO
         {
 
@@ -19,7 +20,7 @@ namespace BLL.CATALOGOS
             if (Obj_Departamentos_DAL.sEspecialidad == string.Empty)
             {
                 Obj_Departamentos_DAL.dtParametros = null;
-                Obj_Departamentos_DAL.dtDatos = Obj_WCF.ListarFiltrar("T_DEPARTAMENTOS", "Listar_DEPARTAMENTOS", Obj_Departamentos_DAL.dtParametros);
+                Obj_Departamentos_DAL.dtDatos = Obj_WCF.ListarFiltrar("T_DEPARTAMENTOS", ConfigurationManager.AppSettings["Listar_DEPARTAMENTOS"], null);
             }
             else
             {
