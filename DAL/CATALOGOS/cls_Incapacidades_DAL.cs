@@ -9,7 +9,6 @@ namespace DAL.CATALOGOS
 {
     public class cls_Incapacidades_DAL
     {
-        public object dtParametros;
         #region VARIABLES PRIVADAS
         private char _cAxn;
         private string _sCOD_Area, _sNum_Incap, _sNombre, _sMotivo, _sMsjError;
@@ -26,7 +25,7 @@ namespace DAL.CATALOGOS
         public string sMsjError { get => _sMsjError; set => _sMsjError = value; }
         public int iDias { get => _iDias; set => _iDias = value; }
         public DataTable dtDatos { get => _dtDatos; set => _dtDatos = value; }
-        public DataTable DtParametros { get => _dtParametros; set => _dtParametros = value; }
+        public DataTable dtParametros { get => _dtParametros; set => _dtParametros = value; }
         #endregion
     }
 }
