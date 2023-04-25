@@ -7,8 +7,8 @@
  <title>Mantenimiento de Departamentos</title>
     <link href="../../Estilos/main.css" rel="stylesheet" />
 </head>
-<body class="homepage is-preload"> 
-	<form id="form1" runat="server">
+<body class="homepage is-preload">
+		<form id="form1" runat="server">
 		<div id="page-wrapper">
 
 			<!-- Header -->
@@ -55,6 +55,42 @@
 							</nav>
 
 					</div>
+
+					 </header>
+        
+        <!-- Main content -->
+        <main id="main">
+            <div class="container">
+                <h2>Mantenimiento de Departamentos</h2>
+                <hr>
+                
+                <!-- Buttons -->
+                <div class="button-group">
+                    <button id="btnAgregar">Agregar</button>
+                    <button id="btnEditar">Editar</button>
+                    <button id="btnEliminar">Eliminar</button>
+                </div>
+                <div> <asp:Label ID="lbl_Filtro" runat="server" Text="Filtro"></asp:Label>
+					
+					
+					<asp:TextBox ID="txt_Filtro" runat="server"  AutoPostBack="True" OnTextChanged="txt_Filtro_TextChanged"></asp:TextBox></div>
+                <!-- Grid -->
+                <div id="gridDepartamentos">
+                    <asp:GridView ID="dgv_Departamentos" runat="server">
+                    </asp:GridView>
+                </div>
+                
+            </div>
+        </main>
+        
+        <!-- Footer -->
+        <footer id="footer">
+            <div class="container">
+                <p>&copy; 2023 Caja Costarricense del Seguro Social</p>
+            </div>
+        </footer>
+    </div>
+    
 				</section>
 		</div>
 
@@ -132,5 +168,6 @@
 			<script src="../../Javascript/breakpoints.min.js"></script>
 			<script src="../../Javascript/util.js"></script>
 			<script src="../../Javascript/main.js"></script>
-	 </form></body>
+	    </form>
+	</body>
 </html>
