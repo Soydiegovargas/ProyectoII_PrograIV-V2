@@ -96,6 +96,7 @@
     <Content Include="Javascript\jquery.min.js" />
     <Content Include="Javascript\main.js" />
     <Content Include="Javascript\util.js" />
+    <Content Include="Pantallas\Formularios\test.aspx" />
     <Content Include="Pantallas\Formularios\wfrm_Inicio.aspx" />
     <Content Include="Pantallas\Formularios\wfrm_Mantenimiento_CCSS.aspx" />
     <Content Include="Pantallas\Formularios\wfrm_Mant_Asegurados.aspx" />
@@ -116,6 +117,13 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas\Formularios\test.aspx.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pantallas\Formularios\test.aspx.designer.cs">
+      <DependentUpon>test.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pantallas\Formularios\wfrm_Inicio.aspx.cs">
       <DependentUpon>wfrm_Inicio.aspx</DependentUpon>

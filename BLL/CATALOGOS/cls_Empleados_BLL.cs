@@ -62,6 +62,7 @@ namespace BLL.CATALOGOS
 
             if (Obj_Empleados_DAL.sNombre == string.Empty) //Si el campo para el nombre de Centro está vacio
             {
+                
                 Obj_Empleados_DAL.dtParametros = null; //No habran parámetros
                 Obj_Empleados_DAL.dtDatos = Obj_WCF.ListarFiltrar("T_EMPLEADOS", ConfigurationManager.AppSettings["listar_Empleados"], null); //Se manda a ejecutar sin parámetros para filtrar todo
             }
