@@ -8,7 +8,8 @@
     <link href="../../Estilos/main.css" rel="stylesheet" />
 </head>
 <body class="homepage is-preload">
-		<div id="page-wrapper">
+	<form id="form1" runat="server">	
+	<div id="page-wrapper">
 
 			<!-- Header -->
 				<section id="header">
@@ -67,5 +68,8 @@
 			<script src="../../Javascript/breakpoints.min.js"></script>
 			<script src="../../Javascript/util.js"></script>
 			<script src="../../Javascript/main.js"></script>
-	</body>
+	
+			</form>
+
+</body>
 </html>
