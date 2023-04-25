@@ -11,7 +11,7 @@ namespace UX.Pantallas.Formularios
 {
 
 
-    public partial class wfrm_Mant_Empleados
+    public partial class wfrm_Mantenimiento_CCSS
     {
     }
 }

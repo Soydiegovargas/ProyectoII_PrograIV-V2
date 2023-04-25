@@ -1,13 +1,13 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="wfrm_Mant_Inventarios.aspx.cs" Inherits="UX.Pantallas.Formularios.wfrm_Mant_Inventarios" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="wfrm_Inicio.aspx.cs" Inherits="UX.Pantallas.Formularios.wfrm_Inicio" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Mantenimiento de Inventarios</title>
-    <link href="../../Estilos/main.css" rel="stylesheet" />
-    
-    
+    <title>CCSS</title>
+    <meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../../Estilos/main.css" />
 </head>
 <body class="homepage is-preload">
 		<div id="page-wrapper">
@@ -57,11 +57,24 @@
 
 					</div>
 				</section>
-		</div>
-
-	<!-- A partir de aqui empieza la personalizacion de las paginas individuales -->
 		
-	<div> HOLA mantenimiento de Inventarios</div>
+
+		
+
+		
+
+		
+			
+
+		</div>
+		<!--  Aqui empieza la personlacion de la pagina  -->
+
+
+	<h2> Universidad Americana</h2>
+	<h2> Proyecto Programacion IV</h2>
+	<h2>Profesor Nicolas Nu&ntilde;ez</h2>
+	<h4> <img src="../../Imagenes/uam.png" /></h4>
+
 		<!-- Scripts -->
 			<script src="../../Javascript/jquery.min.js"></script>
 			<script src="../../Javascript/jquery.dropotron.min.js"></script>

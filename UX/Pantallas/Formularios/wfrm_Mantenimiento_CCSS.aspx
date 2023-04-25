@@ -1,10 +1,10 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="wfrm_Mant_Inventarios.aspx.cs" Inherits="UX.Pantallas.Formularios.wfrm_Mant_Inventarios" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="wfrm_Mantenimiento_CCSS.aspx.cs" Inherits="UX.Pantallas.Formularios.wfrm_Mantenimiento_CCSS" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Mantenimiento de Inventarios</title>
+    <title>Mantenimiento de CCSS</title>
     <link href="../../Estilos/main.css" rel="stylesheet" />
     
     
@@ -61,7 +61,7 @@
 
 	<!-- A partir de aqui empieza la personalizacion de las paginas individuales -->
 		
-	<div> HOLA mantenimiento de Inventarios</div>
+	<div> HOLA mantenimiento de CCSS</div>
 		<!-- Scripts -->
 			<script src="../../Javascript/jquery.min.js"></script>
 			<script src="../../Javascript/jquery.dropotron.min.js"></script>
