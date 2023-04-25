@@ -209,7 +209,6 @@
       <DependentUpon>wfrm_Mant_Pedidos.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="PRUEBAS_DATAGRID.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Connected Services\WCF\BD.wsdl" />
