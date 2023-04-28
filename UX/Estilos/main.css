@@ -1624,15 +1624,16 @@ input, select, textarea {
 	form input[type="password"],
 	form select,
 	form textarea {
-		-moz-transition: background-color 0.25s ease-in-out;
+		border-style: none;
+    border-color: inherit;
+    border-width: 0;
+    -moz-transition: background-color 0.25s ease-in-out;
 		-webkit-transition: background-color 0.25s ease-in-out;
 		-ms-transition: background-color 0.25s ease-in-out;
 		transition: background-color 0.25s ease-in-out;
 		-webkit-appearance: none;
 		display: block;
-		border: 0;
 		background: #e8e8e8;
-		width: 100%;
 		box-shadow: inset 2px 2px 0px 0px rgba(0, 0, 0, 0.1);
 		border-radius: 4px;
 		line-height: 1.25em;
@@ -1854,7 +1855,9 @@ input, select, textarea {
 
 	#page-wrapper > section {
 		margin-bottom: 0;
-	}
+    top: 0px;
+    left: 0px;
+}
 
 /* Header */
 
