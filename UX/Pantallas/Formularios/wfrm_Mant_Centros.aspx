@@ -6,6 +6,11 @@
 <head runat="server">
     <title>Mantenimiento de Centros</title>
 	<link href="../../Estilos/main.css" rel="stylesheet" />
+    <style type="text/css">
+        .auto-style1 {
+            margin-right: 30;
+        }
+    </style>
 </head>
 <body class="homepage is-preload">
 	<form id="form1" runat="server">
@@ -60,7 +65,20 @@
 
 	<!-- A partir de aqui empieza la personalizacion de las paginas individuales -->
 		
-	<div> HOLA mantenimiento de Centros</div>
+	<div> HOLA mantenimiento de Centros
+		<br />
+        <asp:Button ID="btn_filtrar_centros" runat="server" Text="FILTRAR" />
+        <asp:Button ID="btn_eliminar_centros" runat="server" Text="ELIMINAR" />
+        <asp:Button ID="btn_consultar_centros" runat="server" Text="CONSULTAR" />
+        <br />
+        <br />
+        <br />
+		  <asp:GridView ID="Grid_centros" runat="server" CssClass="auto-style1" Width="954px">
+        </asp:GridView>
+        <br />
+        <br />
+        <br />
+        </div>
 		<!-- Scripts -->
 			<script src="../../Javascript/jquery.min.js"></script>
 			<script src="../../Javascript/jquery.dropotron.min.js"></script>
