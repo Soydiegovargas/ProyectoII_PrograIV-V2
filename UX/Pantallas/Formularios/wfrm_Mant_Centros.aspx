@@ -67,6 +67,8 @@
 		
 	<div> HOLA mantenimiento de Centros
 		<br />
+		<asp:Label ID="Centros" runat="server" Text="Label"></asp:Label>
+		<asp:TextBox ID="txt_Filtro" runat="server"></asp:TextBox>
         <asp:Button ID="btn_filtrar_centros" runat="server" Text="FILTRAR" />
         <asp:Button ID="btn_eliminar_centros" runat="server" Text="ELIMINAR" />
         <asp:Button ID="btn_consultar_centros" runat="server" Text="CONSULTAR" />
