@@ -60,8 +60,30 @@
 		</div>
 
 	<!-- A partir de aqui empieza la personalizacion de las paginas individuales -->
-		
-	<div> HOLA mantenimiento de Empleados</div>
+
+
+        <div class="Recuadro_busqueda">
+
+			<asp:TextBox ID="txt_filtro" runat="server"></asp:TextBox>
+        </div>
+        <div class="Botones">
+
+
+            <asp:Button ID="btn_Buscar" runat="server" Text="Buscar Dato" />
+            <asp:Button ID="btn_Eliminar" runat="server" Text="Eliminar" />
+           
+
+
+
+			
+           
+
+
+
+        </div>	<asp:GridView ID="gv_Empleados" runat="server" AutoGenerateSelectButton="True"></asp:GridView>
+
+	<div> 
+        </div>
 		<!-- Scripts  JS, no afectan grfico-->
 			<script src="../../Javascript/jquery.min.js"></script>
 			<script src="../../Javascript/jquery.dropotron.min.js"></script>
