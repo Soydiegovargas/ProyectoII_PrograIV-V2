@@ -69,7 +69,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\WCF\BD1.wsdl" />
+    <None Include="Connected Services\WCF\BD.wsdl" />
     <None Include="Connected Services\WCF\configuration91.svcinfo" />
     <None Include="Connected Services\WCF\configuration.svcinfo" />
     <None Include="Connected Services\WCF\Reference.svcmap">
@@ -96,6 +96,8 @@
     <Content Include="Javascript\jquery.dropotron.min.js" />
     <Content Include="Javascript\jquery.min.js" />
     <Content Include="Javascript\main.js" />
+    <Content Include="Javascript\notificacion.js" />
+    <Content Include="Javascript\notificacion_II.js" />
     <Content Include="Javascript\util.js" />
     <Content Include="Pantallas\Formularios\wfrm_Inicio.aspx" />
     <Content Include="Pantallas\Formularios\wfrm_Mantenimiento_CCSS.aspx" />
@@ -212,7 +214,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\WCF\WCF__BD3.xsd">
+    <None Include="Connected Services\WCF\WCF__BD.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\WCF\WCF__BD31.xsd">

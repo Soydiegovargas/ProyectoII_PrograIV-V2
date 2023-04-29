@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="HSGNfOEFQKciHcRtRZngzaASjA1f+j9Q/vfl+E6TZNs=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="TpkH3J7+kSW88uSCzkNxB10oRhhg1hnWtyfxLf3aCJU=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="BasicHttpBinding_IBD1">
       <properties>
@@ -112,10 +112,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="BasicHttpBinding_IBD1" contract="WCF.IBD" bindingType="basicHttpBinding" address="http://localhost:84/WCF__BD.svc" bindingConfiguration="BasicHttpBinding_IBD1">
+    <endpoint name="BasicHttpBinding_IBD" contract="WCF.IBD" bindingType="basicHttpBinding" address="http://localhost:83/WCF__BD.svc" bindingConfiguration="BasicHttpBinding_IBD">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://localhost:84/WCF__BD.svc</serializedValue>
+          <serializedValue>http://localhost:83/WCF__BD.svc</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
