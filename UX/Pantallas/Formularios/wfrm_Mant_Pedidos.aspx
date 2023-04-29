@@ -62,17 +62,29 @@
 
 	<!-- A partir de aqui empieza la personalizacion de las paginas individuales -->
 		
-	<div> HOLA mantenimiento de Pedidos<asp:TextBox ID="TextBox1" runat="server" Width="895px"></asp:TextBox>
-        <br />
-        <asp:Button ID="Button1" runat="server" Text="Button" />
-        <asp:Button ID="Button2" runat="server" Text="Button" />
-        <asp:Button ID="Button3" runat="server" Text="Button" />
-        <br />
-        <br />
-        <br />
-        <br />
-        <asp:GridView ID="GridView1" runat="server">
+	<div> HOLA mantenimiento de Pedidos<asp:TextBox ID="txt_buscar" runat="server" Width="735px" OnTextChanged="txt_buscar_TextChanged"></asp:TextBox>
+        <asp:Button ID="btn_buscar" runat="server" Text="Buscar" OnClick="btn_buscar_Click" />
+        <asp:GridView ID="dgv_pedidos" runat="server">
         </asp:GridView>
+        <br />
+        <br />
+        Editar Datos<br />
+        <br />
+        Cod Farmacia<asp:TextBox ID="txt_cod_farmacia" runat="server" Height="25px"></asp:TextBox>
+        <br />
+        Cod Pedido
+        <asp:DropDownList ID="ddl_cod_pedido" runat="server" Height="16px" Width="250px">
+        </asp:DropDownList>
+        <br />
+        Medicamentos
+        <asp:TextBox ID="txt_medicamentos" runat="server"></asp:TextBox>
+        <br />
+        <br />
+        <asp:Button ID="btn_Guardar" runat="server" Text="Guardar" />
+        <br />
+        <asp:Button ID="btn_eliminar" runat="server" Text="Eliminar" />
+        <br />
+        <br />
         <br />
         <br />
         <br />
