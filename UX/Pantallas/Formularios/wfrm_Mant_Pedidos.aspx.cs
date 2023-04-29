@@ -25,7 +25,11 @@ namespace UX.Pantallas.Formularios
             if(!Page.IsPostBack)
             txt_buscar.Text = string.Empty;
             CargarDatos();
-            CargarCombos();
+            dgv_pedidos.DataSource = null;
+            dgv_pedidos.DataSource = obj_pedidos_dal.DtDatos;
+            dgv_pedidos.DataBind();
+
+            //CargarCombos();
         }
 
         private void CargarDatos()

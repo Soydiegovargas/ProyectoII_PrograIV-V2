@@ -13,7 +13,7 @@ namespace BLL.CATALOGOS
     {
         public void listar_filtrar_Pedidos(ref cls_Pedidos_DAL Obj_Pedidos_DAL)
         {
-            WCF.BDClient Obj_WCF = new BDClient();
+           WCF.BDClient Obj_WCF = new BDClient();
 
             if (Obj_Pedidos_DAL.scodpedido == string.Empty)
             {
