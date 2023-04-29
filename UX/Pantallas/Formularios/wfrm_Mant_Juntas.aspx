@@ -63,7 +63,24 @@
 
 	<!-- A partir de aqui empieza la personalizacion de las paginas individuales -->
 		
-	<div> HOLA mantenimiento de JUNTAS</div>
+	<div> HOLA mantenimiento de JUNTAS<asp:TextBox ID="TextBox1" runat="server" Width="929px"></asp:TextBox>
+        <br />
+        <asp:Button ID="Button1" runat="server" Text="Button" />
+        <asp:Button ID="Button2" runat="server" Text="Button" />
+        <asp:Button ID="Button3" runat="server" Text="Button" />
+        <br />
+        <br />
+        <br />
+        <asp:GridView ID="GridView1" runat="server">
+        </asp:GridView>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+            </div>
 		<!-- Scripts -->
 			<script src="../../Javascript/jquery.min.js"></script>
 			<script src="../../Javascript/jquery.dropotron.min.js"></script>
