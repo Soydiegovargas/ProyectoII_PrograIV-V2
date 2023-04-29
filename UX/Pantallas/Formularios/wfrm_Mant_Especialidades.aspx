@@ -34,7 +34,7 @@
 											<li><a href="wfrm_Mant_Farmacias.aspx">Mantenimiento Farmacias</a></li>
 											<li><a href="wfrm_Mant_Incapacidades.aspx">Mantenimiento Incapacidades</a></li>
 											<li><a href="wfrm_Mant_Inventarios.aspx">Mantenimiento Inventarios</a></li>
-											<li><a href="wfrm_Mant_Juntas.aspx">Mantenimiento Juntas</a></li>
+											<li><a href="wfrm_Mant_Pedidos.aspx">Mantenimiento Pedidos</a></li>
 											<li>
 												
 												
