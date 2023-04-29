@@ -40,6 +40,9 @@ namespace UX.Pantallas.Formularios
             
         }
 
-        
+        protected void dgv_Departamentos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

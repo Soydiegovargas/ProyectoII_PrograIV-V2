@@ -60,7 +60,7 @@ namespace BLL.CATALOGOS
         {
             WCF.BDClient Obj_WCF = new BDClient(); // se crea el objeto de manejo de la BD
 
-            if (Obj_Empleados_DAL.sNombre == string.Empty) //Si el campo para el nombre de Centro está vacio
+            if (Obj_Empleados_DAL.sCed_Empleado == string.Empty) //Si el campo para el nombre de Centro está vacio
             {
                 
                 Obj_Empleados_DAL.dtParametros = null; //No habran parámetros

@@ -35,6 +35,7 @@
 											<li><a href="wfrm_Mant_Incapacidades.aspx">Mantenimiento Incapacidades</a></li>
 											<li><a href="wfrm_Mant_Inventarios.aspx">Mantenimiento Inventarios</a></li>
 											<li><a href="wfrm_Mant_Juntas.aspx">Mantenimiento Juntas</a></li>
+											<li><a href="wfrm_Mant_Pedidos.aspx">Mantenimiento Pedidos</a></li>
 											<li>
 												
 												
@@ -63,13 +64,15 @@
 	<!-- A partir de aqui empieza la personalizacion de las paginas individuales -->
             <div >HOLA mantenimiento de CCSS
 				<br />
+				<asp:Label ID="Label1" runat="server" Text="Filtro"></asp:Label>
+				<asp:TextBox ID="txt_Filtro" runat="server"></asp:TextBox>
         <asp:Button ID="btn_filtrar_ccss" runat="server" Text="FILTRAR" />
         <asp:Button ID="btn_eliminar_ccss" runat="server" Text="ELIMINAR" />
         <asp:Button ID="btn_consultar_ccss" runat="server" Text="CONSULTAR" />
         <br />
         <br />
         <br />
-		  <asp:GridView ID="GridView1" runat="server" Width="962px">
+		  <asp:GridView ID="GridCCSS" runat="server" Width="962px">
         </asp:GridView>
         <br />
         <br />
