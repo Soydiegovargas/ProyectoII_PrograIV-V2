@@ -63,7 +63,7 @@
 
 	<!-- A partir de aqui empieza la personalizacion de las paginas individuales -->
 		
-	<div> HOLA mantenimiento de Pedidos<asp:TextBox ID="txt_buscar" runat="server" Width="735px" OnTextChanged="txt_buscar_TextChanged"></asp:TextBox>
+	<div> HOLA mantenimiento de Pedidos<asp:TextBox ID="txt_buscar" runat="server" Width="743px" OnTextChanged="txt_buscar_TextChanged"></asp:TextBox>
         <asp:Button ID="btn_buscar" runat="server" Text="Buscar" OnClick="btn_buscar_Click" />
         <asp:GridView ID="dgv_pedidos" runat="server">
         </asp:GridView>

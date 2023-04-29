@@ -64,6 +64,36 @@
 	<!-- A partir de aqui empieza la personalizacion de las paginas individuales -->
 		
 	<div> HOLA mantenimiento de Inventarios</div>
+		<asp:TextBox ID="txt_buscar" runat="server" Width="743px" OnTextChanged="txt_buscar_TextChanged"></asp:TextBox>
+        
+		<br />
+	<h1>Incapacidades</h1>
+	<form method="post" action="procesar_incapacidad.php">
+		<label for="cod_area">Código de área:</label>
+		<input type="text" id="cod_area" name="cod_area"><br>
+
+		<label for="num_incap">Número de incapacidad:</label>
+		<input type="text" id="num_incap" name="num_incap"><br>
+
+		<label for="nombre">Nombre:</label>
+		<input type="text" id="nombre" name="nombre"><br>
+
+		<label for="motivo">Motivo:</label>
+		<input type="text" id="motivo" name="motivo"><br>
+
+		<label for="dias">Días:</label>
+		<input type="text" id="dias" name="dias"><br>
+
+		<input type="submit" value="Enviar">
+		    <asp:Button ID="btn_buscar" runat="server" Text="Buscar" OnClick="btn_buscar_Click" />
+    <asp:Button ID="btn_limpiar" runat="server" Text="Limpiar" OnClick="btn_limpiar_Click" />
+	        <asp:Button ID="btn_Guardar" runat="server" Text="Guardar" OnClick="btn_Guardar_Click" />
+	        <asp:Button ID="btn_eliminar" runat="server" Text="Eliminar" OnClick="btn_eliminar_Click" />
+
+		        <asp:GridView ID="dgv_Inventarios" runat="server">
+        </asp:GridView>
+	</form>
+        <br />
 		<!-- Scripts -->
 			<script src="../../Javascript/jquery.min.js"></script>
 			<script src="../../Javascript/jquery.dropotron.min.js"></script>

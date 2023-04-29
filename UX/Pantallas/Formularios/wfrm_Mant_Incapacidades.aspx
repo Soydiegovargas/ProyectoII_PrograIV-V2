@@ -64,6 +64,39 @@
 	<!-- A partir de aqui empieza la personalizacion de las paginas individuales -->
 		
 	<div> HOLA mantenimiento de Incapacidades</div>
+			<asp:TextBox ID="txt_buscar" runat="server" Width="743px" OnTextChanged="txt_buscar_TextChanged"></asp:TextBox>
+		<br />
+		<div>
+			    <label>Código de área:</label>
+			<asp:TextBox ID="txt_buscarCodigoArea" runat="server"></asp:TextBox>
+</div>
+<div>
+    <label>Número de incapacidad:</label>
+	<asp:TextBox ID="txt_buscarNumeroIncapacidad" runat="server"></asp:TextBox>
+</div>
+<div>
+    <label>Nombre:</label>
+	<asp:TextBox ID="txt_buscarNombre" runat="server"></asp:TextBox>
+</div>
+<div>
+    <asp:Button ID="btn_buscar" runat="server" Text="Buscar" OnClick="btn_buscar_Click" />
+    <asp:Button ID="btn_limpiar" runat="server" Text="Limpiar" OnClick="btn_limpiar_Click" />
+	        <asp:Button ID="btn_Guardar" runat="server" Text="Guardar" OnClick="btn_Guardar_Click" />
+	        <asp:Button ID="btn_eliminar" runat="server" Text="Eliminar" OnClick="btn_eliminar_Click" />
+
+
+</div>
+			        <asp:GridView ID="dgv_incapacidades" runat="server">
+        </asp:GridView>
+        <br />
+        <br />
+			<div>
+  <h2>Mantenimiento de Incapacidades</h2>
+</div>
+<div>
+  <h3>Editar datos</h3>
+</div>
+
 		<!-- Scripts -->
 			<script src="../../Javascript/jquery.min.js"></script>
 			<script src="../../Javascript/jquery.dropotron.min.js"></script>

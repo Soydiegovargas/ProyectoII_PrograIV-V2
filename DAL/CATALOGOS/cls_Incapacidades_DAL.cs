@@ -25,6 +25,7 @@ namespace DAL.CATALOGOS
         public string sMsjError { get => _sMsjError; set => _sMsjError = value; }
         public int iDias { get => _iDias; set => _iDias = value; }
         public DataTable dtDatos { get => _dtDatos; set => _dtDatos = value; }
+        public object DtDatos { get; set; }
         public DataTable dtParametros { get => _dtParametros; set => _dtParametros = value; }
         #endregion
     }

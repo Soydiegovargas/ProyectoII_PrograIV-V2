@@ -28,7 +28,7 @@
 									<li>
 										<a href="#" class="icon fa-chart-bar"><span>Esquema Administrativo</span></a>
 										<ul>
-											<li><a href="wfrm_Mantenimiento_CCSS.aspx">Mantenimiento entidad</a></li>
+											<li><a href="wfrm_Mantenimiento_CCSS.aspx">Mantenimiento Entidad</a></li>
 											<li><a href="wfrm_Mant_Centros.aspx">Mantenimiento Centros</a></li>
 											<li><a href="wfrm_Mant_Departamentos.aspx">Mantenimiento Departamentos</a></li>
 											<li><a href="wfrm_Mant_Farmacias.aspx">Mantenimiento Farmacias</a></li>
