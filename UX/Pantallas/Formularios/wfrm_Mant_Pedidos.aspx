@@ -81,9 +81,9 @@
         <asp:TextBox ID="txt_medicamentos" runat="server"></asp:TextBox>
         <br />
         <br />
-        <asp:Button ID="btn_Guardar" runat="server" Text="Guardar" />
+        <asp:Button ID="btn_Guardar" runat="server" Text="Guardar" OnClick="btn_Guardar_Click" />
         <br />
-        <asp:Button ID="btn_eliminar" runat="server" Text="Eliminar" />
+        <asp:Button ID="btn_eliminar" runat="server" Text="Eliminar" OnClick="btn_eliminar_Click" />
         <br />
         <br />
         <br />
