@@ -69,6 +69,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Connected Services\WCF\BD1.wsdl" />
     <None Include="Connected Services\WCF\configuration91.svcinfo" />
     <None Include="Connected Services\WCF\configuration.svcinfo" />
     <None Include="Connected Services\WCF\Reference.svcmap">
@@ -211,14 +212,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\WCF\BD.wsdl" />
-    <None Include="Connected Services\WCF\WCF__BD.xsd">
+    <None Include="Connected Services\WCF\WCF__BD3.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\WCF\WCF__BD1.xsd">
+    <None Include="Connected Services\WCF\WCF__BD31.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\WCF\WCF__BD2.xsd">
+    <None Include="Connected Services\WCF\WCF__BD32.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="packages.config" />

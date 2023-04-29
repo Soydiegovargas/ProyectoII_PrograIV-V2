@@ -63,19 +63,30 @@
 
 	<!-- A partir de aqui empieza la personalizacion de las paginas individuales -->
 		
-	<div> HOLA mantenimiento de JUNTAS<asp:TextBox ID="TextBox1" runat="server" Width="929px"></asp:TextBox>
+	<div> HOLA mantenimiento de JUNTAS<asp:TextBox ID="txt_buscar" runat="server" Width="734px" Height="17px" OnTextChanged="txt_buscar_TextChanged"></asp:TextBox>
         <br />
-        <asp:Button ID="Button1" runat="server" Text="Button" />
-        <asp:Button ID="Button2" runat="server" Text="Button" />
-        <asp:Button ID="Button3" runat="server" Text="Button" />
+        <asp:Button ID="btn_buscar" runat="server" Text="Buscar" OnClick="btn_buscar_Click" />
         <br />
         <br />
         <br />
-        <asp:GridView ID="GridView1" runat="server">
+        <asp:GridView ID="dgv_juntas" runat="server">
         </asp:GridView>
         <br />
+        Editar datos:<br />
+        COD_JUNTA:<asp:DropDownList ID="ddl_COD_JUNTA" runat="server" Width="221px">
+        </asp:DropDownList>
+        <br />
+        COD_CENTRO:<asp:TextBox ID="txt_cod_centro" runat="server" Height="37px" Width="184px"></asp:TextBox>
+        <br />
+        NOMBRE:<asp:TextBox ID="txt_Nombre" runat="server"></asp:TextBox>
+        <br />
+        TELEFONO:<asp:TextBox ID="txt_telefono" runat="server"></asp:TextBox>
         <br />
         <br />
+        <asp:Button ID="btn_guardar" runat="server" Text="Guardar" OnClick="btn_guardar_Click" />
+        <br />
+        <br />
+        <asp:Button ID="btn_eliminar" runat="server" OnClick="btn_eliminar_Click" Text="Eliminar" />
         <br />
         <br />
         <br />

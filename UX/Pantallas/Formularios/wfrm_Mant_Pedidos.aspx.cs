@@ -29,7 +29,7 @@ namespace UX.Pantallas.Formularios
             dgv_pedidos.DataSource = obj_pedidos_dal.DtDatos;
             dgv_pedidos.DataBind();
 
-            //CargarCombos();
+         CargarCombos();
         }
 
         private void CargarDatos()
@@ -52,8 +52,8 @@ namespace UX.Pantallas.Formularios
             obj_pedidos_dal.DtDatos.Rows.Add("0", "--- SELECCIONE UN CODIGO ---");
 
             ddl_cod_pedido.DataSource = null;
-            ddl_cod_pedido.DataTextField = "NOMBRE REGIÓN";
-            ddl_cod_pedido.DataValueField = "CÓDIGO REGIÓN";
+            ddl_cod_pedido.DataTextField = "COD_PEDIDO";
+            ddl_cod_pedido.DataValueField = "COD_PEDIDO";
             ddl_cod_pedido.DataSource = obj_pedidos_dal.DtDatos;
             //ddl_Regiones.DataBind();
 
@@ -67,6 +67,30 @@ namespace UX.Pantallas.Formularios
 
         protected void btn_buscar_Click(object sender, EventArgs e)
         {
+            CargarDatos();
+        }
+
+        protected void btn_Guardar_Click(object sender, EventArgs e)
+        {
+            obj_pedidos_dal.scodfarmacia = txt_cod_farmacia.Text.Trim();
+            obj_pedidos_dal.sMedicamnetos = txt_medicamentos.Text.Trim();
+            obj_pedidos_dal.scodpedido = ddl_cod_pedido.SelectedValue.ToString().Trim();
+
+            obj_Pedidos_BLL.insertar_Pedidos(ref obj_pedidos_dal);
+
+            txt_cod_farmacia.Text = string.Empty;
+            txt_medicamentos.Text = string.Empty;
+           
+            CargarDatos();
+        }
+
+        protected void btn_eliminar_Click(object sender, EventArgs e)
+        {
+            obj_pedidos_dal.scodpedido = ddl_cod_pedido.Text.Trim();
+
+            obj_Pedidos_BLL.eliminar_Pedidos(ref obj_pedidos_dal);
+
+            txt_buscar.Text = string.Empty;
             CargarDatos();
         }
     }

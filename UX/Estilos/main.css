@@ -86,6 +86,8 @@ input, select, textarea {
 		background: #f0f0f0;
 	}
 
+		body.is-
+
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
 			-moz-animation: none !important;
 			-webkit-animation: none !important;
@@ -97,7 +99,7 @@ input, select, textarea {
 			transition: none !important;
 		}
 
-	body, input, textarea, select {
+	extarea, select {
 		font-family: 'Source Sans Pro';
 		font-weight: 300;
 		color: #777;
@@ -1619,6 +1621,8 @@ input, select, textarea {
 		margin: 0 0 1em 0;
 	}
 
+	form inpu
+
 	form input[type="text"],
 	form input[type="email"],
 	form input[type="password"],
@@ -1640,7 +1644,7 @@ input, select, textarea {
 		padding: 0.75em 1em 0.75em 1em;
 	}
 
-		form input[type="text"]:focus,
+		e="text"]:focus,
 		form input[type="email"]:focus,
 		form input[type="password"]:focus,
 		form select:focus,
@@ -1713,6 +1717,8 @@ input, select, textarea {
 			border-top: solid 2px #E5E5E5;
 		}
 
+/* Button 
+
 /* Button */
 
 	input[type="button"],
@@ -1742,13 +1748,13 @@ input, select, textarea {
 		font-size: 0.85em;
 		letter-spacing: 2px;
 		padding: 0.85em 2.75em 0.85em 2.75em;
-    top: 0px;
-    left: 0px;
+    top: 12px;
+    left: -26px;
     height: 62px;
     width: 183px;
 }
 
-		input[type="button"].icon:before,
+		tton"].icon:before,
 		input[type="submit"].icon:before,
 		input[type="reset"].icon:before,
 		button.icon:before,
