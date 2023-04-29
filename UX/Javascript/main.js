@@ -63,3 +63,21 @@
 				});
 
 })(jQuery);
+
+
+function mostrarNotificacion() {
+	var notificacion = document.getElementById("notificacion");
+	notificacion.style.display = "block"; // Mostrar el div
+	notificacion.showModal();
+}
+
+function cerrarNotificacion() {
+	var notificacion = document.getElementById("notificacion");
+	notificacion.close();
+	notificacion.style.display = "none"; // Ocultar el div
+
+}
+
+function mostrarMensaje() {
+	alert("Este es un mensaje desde JavaScript");
+}

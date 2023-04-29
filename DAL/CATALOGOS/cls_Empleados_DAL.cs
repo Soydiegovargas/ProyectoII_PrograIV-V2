@@ -11,7 +11,7 @@ namespace DAL.CATALOGOS
     {
         #region VARIABLES PRIVADAS
         private string _sCed_Empleado, _sNombre, _sDireccion, _sCod_Junta, _sMsjError;
-        private int _iTelefono;
+        private int _iTelefono, _iSeleccion;
         private DataTable _dtDatos, _dtParametros;
         private char _cOpcion;
         #endregion
@@ -26,6 +26,7 @@ namespace DAL.CATALOGOS
         public char cOpcion { get => _cOpcion; set => _cOpcion = value; }
         public string sMsjError { get => _sMsjError; set => _sMsjError = value; }
         public DataTable dtParametros { get => _dtParametros; set => _dtParametros = value; }
+        public int ISeleccion { get => _iSeleccion; set => _iSeleccion = value; }
         #endregion
     }
 }
