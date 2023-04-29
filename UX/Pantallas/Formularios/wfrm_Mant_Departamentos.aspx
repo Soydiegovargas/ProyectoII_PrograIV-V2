@@ -33,6 +33,7 @@
 											<li><a href="wfrm_Mant_Incapacidades.aspx">Mantenimiento Incapacidades</a></li>
 											<li><a href="wfrm_Mant_Inventarios.aspx">Mantenimiento Inventarios</a></li>
 											<li><a href="wfrm_Mant_Juntas.aspx">Mantenimiento Juntas</a></li>
+											<li><a href="wfrm_Mant_Pedidos.aspx">Mantenimiento Pedidos</a></li>
 											<li>
 												
 												
@@ -62,7 +63,6 @@
         <main id="main">
             <div class="container">
                 <h2>Mantenimiento de Departamentos</h2>
-                <hr>
                 
                 <!-- Buttons -->
                 <div class="button-group">
@@ -76,7 +76,14 @@
 					<asp:TextBox ID="txt_Filtro" runat="server"  AutoPostBack="True" OnTextChanged="txt_Filtro_TextChanged"></asp:TextBox></div>
                 <!-- Grid -->
                 <div id="gridDepartamentos">
-                    <asp:GridView ID="dgv_Departamentos" runat="server">
+                    <asp:GridView ID="dgv_Departamentos" runat="server" OnSelectedIndexChanged="dgv_Departamentos_SelectedIndexChanged" AutoPostBack="False">
+						<Columns>
+    <asp:TemplateField>
+      <ItemTemplate>
+        <asp:Button runat="server" Text="Seleccionar fila" CommandName="SelectRow" CommandArgument='<%# Container.DataItemIndex %>' AutoPostBack="False" />
+      </ItemTemplate>
+    </asp:TemplateField>
+  </Columns>
                     </asp:GridView>
                 </div>
                 
