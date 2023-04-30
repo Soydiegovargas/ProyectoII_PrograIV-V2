@@ -17,7 +17,6 @@ namespace BLL.CATALOGOS
         public void Listar_Filtrar_Juntas(ref cls_Juntas_DAL Obj_Juntas_DAL)
         {
 
-
             WCF.BDClient Obj_WCF = new BDClient();
 
             if (Obj_Juntas_DAL.sNombre == string.Empty)
@@ -31,7 +30,6 @@ namespace BLL.CATALOGOS
                 Obj_Juntas_DAL.dtparametros.Rows.Add("@Filtro", "7", Obj_Juntas_DAL.sNombre);
                 Obj_Juntas_DAL.dtDatos = Obj_WCF.ListarFiltrar("T_JUNTAS", ConfigurationManager.AppSettings["filtrar_Juntas"], Obj_Juntas_DAL.dtparametros);
             }
-
 
         }
 

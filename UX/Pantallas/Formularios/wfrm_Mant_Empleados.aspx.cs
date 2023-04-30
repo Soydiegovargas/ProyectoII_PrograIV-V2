@@ -142,7 +142,7 @@ namespace UX.Pantallas.Formularios
 
             BLL_JUNTAS.Listar_Filtrar_Juntas(ref DAL_JUNTAS);
             //pone la lista dropdownlist en blanco para luego inyectar data  y agrega fila
-            DAL_EMPLE.dtDatos.Rows.Add("0", "--- SELECCIONE UN codigo ---");
+            DAL_JUNTAS.dtDatos.Rows.Add("0", "--- SELECCIONE UN codigo ---");
             ddl_COD_JUNTA.DataSource = null;
             //nombre exacto de Segunda columna de la tabla, esta son los datos
             ddl_COD_JUNTA.DataTextField = "COD_JUNTA";
