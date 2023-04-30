@@ -214,13 +214,13 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Connected Services\WCF\BD.wsdl" />
-    <None Include="Connected Services\WCF\WCF__BD.xsd">
+    <None Include="Connected Services\WCF\WCF_BD.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\WCF\WCF__BD1.xsd">
+    <None Include="Connected Services\WCF\WCF_BD1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\WCF\WCF__BD2.xsd">
+    <None Include="Connected Services\WCF\WCF_BD2.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="packages.config" />
