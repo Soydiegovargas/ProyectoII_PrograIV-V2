@@ -217,6 +217,12 @@
     <None Include="Connected Services\WCF\WCF__BD.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Connected Services\WCF\WCF__BD1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\WCF\WCF__BD2.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\WCF\WCF__BD31.xsd">
       <SubType>Designer</SubType>
     </None>

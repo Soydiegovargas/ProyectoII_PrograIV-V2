@@ -37,13 +37,9 @@
 											<li><a href="wfrm_Mant_Juntas.aspx">Mantenimiento Juntas</a></li>
 											<li><a href="wfrm_Mant_Pedidos.aspx">Mantenimiento Pedidos</a></li>
 											<li>
-												
-												
 											</li>
-										
 										</ul>
 									</li>
-									
 									<li>
 										<a href="#" class="icon fa-chart-bar"><span>Esquema Medico</span></a>
 										<ul>
@@ -59,18 +55,8 @@
 
 					</div>
 				</section>
-		
-
-		
-
-		
-
-		
-			
-
 		</div>
 		<!--  Aqui empieza la personlacion de la pagina  -->
-
 
 	<h2> Universidad Americana</h2>
 	<h2> Proyecto Programacion IV</h2>
