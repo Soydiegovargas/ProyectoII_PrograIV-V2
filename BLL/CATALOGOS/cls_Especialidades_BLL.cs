@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DAL.CATALOGOS;
 using System.Configuration;
 using BLL.WCF;
+using DAL.CATALOGOS;
 
 
 namespace BLL.CATALOGOS

@@ -19,20 +19,12 @@ namespace BLL.CATALOGOS
             {
                 Obj_Pedidos_DAL.dtparametros = null;
                 Obj_Pedidos_DAL.dtDatos = Obj_WCF.ListarFiltrar("T_PEDIDOS", "listar_Pedidos", Obj_Pedidos_DAL.dtparametros);
-
-
-
             }
             else
             {
-
-
                 Obj_Pedidos_DAL.dtparametros = Obj_WCF.Get_DT_Param(Obj_Pedidos_DAL.dtparametros);
                 Obj_Pedidos_DAL.dtparametros.Rows.Add("@Filtro", "7", Obj_Pedidos_DAL.scodpedido);
                 Obj_Pedidos_DAL.dtDatos = Obj_WCF.ListarFiltrar("T_PEDIDOS", ConfigurationManager.AppSettings["filtrar_Pedidos"], Obj_Pedidos_DAL.dtparametros);
-
-
-
             }
 
 

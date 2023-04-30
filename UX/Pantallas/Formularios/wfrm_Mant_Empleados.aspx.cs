@@ -5,7 +5,6 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using BLL.CATALOGOS;
-using BLL.WCF;
 using DAL.CATALOGOS;
 
 
